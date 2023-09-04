@@ -13,8 +13,7 @@ function App() {
       </Switch>
       <Footer/>
     </React.Fragment>
-
-  );
+  )
 }
 
 export default App;
