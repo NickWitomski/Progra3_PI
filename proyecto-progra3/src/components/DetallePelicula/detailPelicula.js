@@ -1,7 +1,7 @@
 import React, {Component} from "react"
-import detallePelicula from "../screens/Pelicula/Pelicula.js";
+import detallePelicula from "../screens/DetallePelicula/detallePelicula";
 
-function detailPelicula(props){
+function detailPelicula (props){
     return(
         <React.Fragment>
         <section className="section_peli1"> 
@@ -26,5 +26,21 @@ function detailPelicula(props){
         </React.Fragment>
     )
 }
+// class detailPelicula extends Component{
+//     constructor(props){
+//         super(props)
+//         this.state = {
+//             textoFavoritos = "Agregar a favoritos"
+//         }
+//     }
+
+//     componentDidMount(){
+//         let peliculaTraida = localStorage.getItem("pelicula")
+//         if(peliculaTraida === null){
+//             this.state.textoFavoritos = "Agregar a favoritos"
+//         } else if ()
+//     }
+   
+
 
 export default detailPelicula;
