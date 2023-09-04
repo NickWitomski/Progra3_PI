@@ -1,34 +1,31 @@
 import React from "react";
+import "./Footer.css"
 
 function Footer(){
+    let listaLi = ["fa-brands fa-whatsapp","fa-regular fa-envelope","fa-brands fa-instagram","fa-solid fa-link","fa-solid fa-circle-info"]
+    let listaEtiquetaP = ["Todos los derechos reservados","Copyright © 2003-2022 Fort Corporation","Marcos Pinto Escalier, Giuliana Molina y  Nicole Witomski"]
     return(
         <React.Fragment>
-        <div>
-            <footer>
             <section>
-                <article>
-                    <br> 
-                    <p class="texto2">Todos los derechos reservados</p>
-                    <p class="texto2"> Copyright © 2003-2022 Fort Corporation</p>
-                    <p class="texto1"> Marcos Pinto Escalier, Bautista Porcello y  Nicole Witomski</p> 
-                    
-                    <ul class="contacto">
-                        
-                        <li class="icono"><i class="fa-brands fa-whatsapp"></i>  </li>
-                        <li class="icono"><i class="fa-regular fa-envelope"></i> </li>
-                        <li class="icono"> <i class="fa-brands fa-instagram"> </i> </li>
-                        <li class="icono"> <i class="fa-solid fa-link"></i> </li>
-                        <li class="icono"> <i class="fa-solid fa-circle-info"></i> </li>
+                <article> 
+                    {
+                        listaLi.map(elemento =>
+                            <li className="icono"><i className={elemento}></i> </li>
+                        )
+                    }
+                    <ul className="contacto">
+                        {
+                            listaEtiquetaP.map(elementoPe =>
+                                <p>{elementoPe} </p>
+                            )
+                        } 
                     </ul>
-                </article> 
-                <article class="art2_footer">
-                    <img class="logo_tmdb" src="./img/Logo_TMDB.svg" alt="Logo_themoviedatabase"/> 
                 </article>
-            </section>   
-        </footer>
-        </div>
-    </React.Fragment>
-    )
-}
+                <article class="art2_footer">
+                        <img className="logo_tmdb" src="../public/img/Logo_TMDB.svg" alt="Logo_themoviedatabase"/> 
+                </article>
+            </section>
+        </React.Fragment>
+    )}
 
 export default Footer;
