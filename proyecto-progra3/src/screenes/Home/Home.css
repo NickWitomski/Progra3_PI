@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(to right, #000000, #434343);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0px;
+}
+.categoria1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.categoria2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.categoria3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.articulo{
+    flex-wrap: wrap;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.titulocategorias {
+    color:rgb(255, 225, 170);
+    width:100%;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 17px;
+    text-align: center;
+}
