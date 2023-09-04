@@ -4,6 +4,16 @@ body {
     background-attachment: fixed;
     margin:0px;
 }
+h3 {
+    color:rgb(255, 225, 170);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 20px;
+}
+
 .categoria1 {
     display: flex;
     flex-wrap: wrap;
@@ -38,3 +48,4 @@ body {
     margin-bottom: 17px;
     text-align: center;
 }
+
