@@ -6,6 +6,7 @@ function Footer(){
     let listaEtiquetaP = ["Todos los derechos reservados","Copyright © 2003-2022 Fort Corporation","Marcos Pinto Escalier, Giuliana Molina y  Nicole Witomski"]
     return(
         <React.Fragment>
+            <footer> 
             <section>
                 <article> 
                     {
@@ -16,15 +17,16 @@ function Footer(){
                     <ul className="contacto">
                         {
                             listaEtiquetaP.map(elementoPe =>
-                                <p>{elementoPe} </p>
+                                <p className="texto2">{elementoPe} </p>
                             )
                         } 
                     </ul>
                 </article>
-                <article class="art2_footer">
-                        <img className="logo_tmdb" src="../public/img/Logo_TMDB.svg" alt="Logo_themoviedatabase"/> 
+                <article className="art2_footer">
+                        <img className="logo_tmdb" src="./img/Logo_TMDB.svg" alt="Logo_themoviedatabase"/> 
                 </article>
             </section>
+            </footer>
         </React.Fragment>
     )}
 
