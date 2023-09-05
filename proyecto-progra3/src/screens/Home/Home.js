@@ -1,7 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Home.css";
+import Card from "../../components/Card/Card";
 
-function Home() {
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      peliculas:[],
+      titulo:[],
+      portada:[],
+      fecha_de_estreno:[],
+      rating:[],
+      sinopsis:[],
+      duracion:[],
+      imgUrl:""
+    }
+  };
+
+componentDidMount() {
+  fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
+    .then((res) => res.json())
+    .then((data) =>
+      this.setState({
+        pelicula:data.results,
+        
+      })
+    )
+    .catch(error => console.log(error));
+}
+
+render () {
+  console.log(this.state.pelicula)
   return (
     <React.Fragment>
      <main>
@@ -19,5 +48,8 @@ function Home() {
     </React.Fragment>
   );
 }
+
+}
+
 
 export default Home;
