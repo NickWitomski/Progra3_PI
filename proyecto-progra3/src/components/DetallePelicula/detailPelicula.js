@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import detallePelicula from "../screens/DetallePelicula/detallePelicula";
+// import detallePelicula from "../screens/DetallePelicula/detallePelicula";
 
 function detailPelicula (props){
     return(
@@ -7,15 +7,15 @@ function detailPelicula (props){
         <section className="section_peli1"> 
             <h1>{titulo}</h1>
             <article className="articulo1">
-                <img className="imagen" src={portada} alt={titulo} />
+                <img className="imagen" src={this.props.portada} alt={this.props.titulo} />
             </article>
         </section>
         <section className="section_peli2">
             <article class="articulo2">
-                <p className="texto"> Fecha de estreno: {fecha_de_estreno}</p>
-                <p className="texto"> Rating: ${rating}</p>
-                <p className="texto"> Sinopsis: ${sinopsis}</p>
-                <p className="texto"> Duración: ${duracion} mins</p>
+                <p className="texto"> Fecha de estreno: {this.props.fecha_de_estreno}</p>
+                <p className="texto"> Rating: ${this.props.rating}</p>
+                <p className="texto"> Sinopsis: ${this.props.sinopsis}</p>
+                <p className="texto"> Duración: ${this.props.duracion} mins</p>
                 {/* <p className="texto"> Generos: ${listaGeneros}</p> */}
             </article>
             {/* <article className="articulo_boton">

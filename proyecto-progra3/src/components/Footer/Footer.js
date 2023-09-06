@@ -10,14 +10,14 @@ function Footer(){
             <section>
                 <article> 
                     {
-                        listaLi.map(elemento =>
-                            <li className="icono"><i className={elemento}></i> </li>
+                        listaLi.map((elemento,idx) =>
+                            <li key={elemento + idx} className="icono"><i className={elemento}></i> </li>
                         )
                     }
                     <ul className="contacto">
                         {
-                            listaEtiquetaP.map(elementoPe =>
-                                <p className="texto2">{elementoPe} </p>
+                            listaEtiquetaP.map((elementoPe,idx) =>
+                                <p className="texto2" key={elementoPe + idx}>{elementoPe} </p>
                             )
                         } 
                     </ul>

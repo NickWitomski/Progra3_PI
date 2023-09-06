@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import detailPelicula from "../components/DetallePelicula/detailPelicula.js";
+// import detailPelicula from "../components/DetallePelicula/detailPelicula.js";
 
 class detallePelicula extends Component {
     constructor(props) {
