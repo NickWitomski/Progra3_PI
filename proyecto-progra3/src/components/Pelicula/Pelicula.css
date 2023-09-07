@@ -1,0 +1,39 @@
+.articulo{
+    flex-wrap: wrap;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    margin: 20px 0px;
+}
+
+.titulocategorias {
+    color:rgb(255, 225, 170);
+    width:100%;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 17px;
+    text-align: center;
+}
+
+.imagen {
+    width: 250px;
+    height: 400px;
+    border: solid rgb(255, 225, 170) 5px;
+    margin: 0px 10px;
+    display:block;
+}
+
+.descripcion{
+    background-color: rgb(255, 225, 170);
+    border-radius: 7px;
+    padding: 3px;
+    text-align: justify;
+}
+
+.botonPelicula {
+    width: 75px;
+    height: 35px;
+}

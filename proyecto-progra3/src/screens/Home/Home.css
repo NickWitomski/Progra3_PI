@@ -26,26 +26,4 @@ h3 {
     justify-content: space-evenly;
 }
 
-.categoria3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.articulo{
-    flex-wrap: wrap;
-    max-width: 250px;
-    display: flex;
-    justify-content: center;
-}
-
-
-.titulocategorias {
-    color:rgb(255, 225, 170);
-    width:100%;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    margin-bottom: 17px;
-    text-align: center;
-}
 
