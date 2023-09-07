@@ -5,8 +5,7 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
 import Favoritos from './screens/Favoritos/Favoritos.js';
 import NoEncontrada from './screens/NoEncontrado/noEncontrado.js';
-import detailPelicula from './components/DetallePelicula/detailPelicula.js';
-// import detallePelicula from './screens/DetallePelicula/detallePelicula';
+import detallePelicula from './screens/DetallePelicula/detallePelicula';
 
 function App() {
   return (
@@ -15,9 +14,8 @@ function App() {
       <Switch>
       <Route path="/" exact={true} component={Home} />
       <Route path="/favoritos" component={Favoritos}/> 
-      <Route path="/detailPelicula/:id" component={detailPelicula}></Route>
+      <Route path="/detallePelicula/:id" component={detallePelicula}></Route>
       <Route component={NoEncontrada}></Route>
-      {/* <Route path="/detallePelicula" component={detallePelicula}/> */}
       </Switch>
       <Footer/>
     </React.Fragment>

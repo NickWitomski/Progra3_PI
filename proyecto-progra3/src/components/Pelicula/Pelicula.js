@@ -34,7 +34,7 @@ class Pelicula extends Component {
           <button className="botonPelicula" onClick= {() => this.metodoVerDescripcion()}> 
           {this.state.texto}
           </button>
-          <button className="botonPelicula" > <Link to="/detallePelicula"> Ir a detalle </Link> </button>
+          <button className="botonPelicula" > <Link to={`/detallePelicula/:${pelicula.id}`}> Ir a detalle </Link> </button>
           <button className="botonPelicula" > Agregar a favoritos</button>
         </article>
       )

@@ -38,7 +38,7 @@ class Home extends Component {
     console.log("hola")
     return (
       console.log("retornoCartelera"),
-      // console.log(this.state.peliculasPopulares),
+      console.log(this.state.peliculasPopulares),
       console.log(this.state.peliculasCartelera),
       <React.Fragment>
         <h3> PELICULAS MÁS POPULARES </h3>
