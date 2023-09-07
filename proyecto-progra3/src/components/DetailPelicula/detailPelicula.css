@@ -1,0 +1,499 @@
+* {
+    box-sizing:border-box
+}
+
+body {
+    background: linear-gradient(to right, #000000, #434343);
+    background-repeat: no-repeat;
+    margin:0px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    padding: 8px;
+    height: 100px;
+}
+
+.caja1 {
+    display:flex;
+}
+
+.caja2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.logo {
+    height:95%;
+}
+
+ul {
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
+
+.navegador {
+    display: flex;
+    align-items: center;
+}
+
+.textonav {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.error{
+    color:white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.formulario {
+    display: flex;
+    align-self: center;
+}
+
+input {
+    width: 300px;
+    height: 35px;
+}
+
+button {
+    width: 40px;
+    height: 35px;
+}
+
+
+.categorias {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-between;
+    width:95%;
+    height: 600px;
+}
+
+.imagen {
+    width: 350px;
+    height: 500px;
+    border: solid rgb(255, 225, 170) 5px;
+    margin: 0px 10px;
+    display:block;
+    border-radius: 15px;
+}
+
+
+.texto {
+    font-size: 18px;
+    margin-left: 11px;
+    color: rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    text-align:justify ;
+    margin: 15px 10px
+}
+
+h1 {
+    color: rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-left: 15px;
+    width: 100%
+
+}
+
+.detalleMovies{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+
+.section_peli2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 95px;
+    margin-left: 30px;
+}
+
+.proveedores {
+    margin-left: 10px
+}
+.articulo1 {
+    display: flex;
+}
+
+
+.articulo2 {
+    display: flex;
+    flex-direction: column;
+    background-color:black;
+    border-radius: 15px;
+    border: solid 4px rgb(255, 225, 170)
+}
+
+.articulo_boton{
+    margin-top: 50px;
+}
+
+.favoritos {
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:  black;
+    font-family: 'Oswald', sans-serif;
+    border: solid 4px rgb(255, 225, 170);
+    border-radius: 5px;
+    background-color: rgb(255, 225, 170);
+}
+
+.section_recomendaciones {
+    width: 50%;
+    justify-content: flex-start;
+    display: flex
+}
+
+.boton_recomendaciones {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:  black;
+    font-family: 'Oswald', sans-serif;
+    border: solid 4px rgb(255, 225, 170);
+    border-radius: 5px;
+    background-color: rgb(255, 225, 170);
+}
+
+.articulo {
+    flex-wrap: wrap;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.trailers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h2{
+    color:rgb(255, 225, 170);
+    width:100%;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 30px;
+}
+
+.logo_prov{
+    max-width: 70px;
+    max-height: 70px;
+    border: solid 2px rgb(255, 225, 170);
+    border-radius: 6px;
+}
+
+.elemento_prov{
+    margin: 20px
+}
+
+.elemento_lista{
+    color:white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    margin: 20px
+}
+
+.imagen_recomendaciones{
+    max-width: 250px;
+    max-height: 250px;
+    border: solid 2px rgb(255, 225, 170);
+    border-radius: 6px;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(255, 225, 170);
+    border-radius: 15px;
+    border: solid 6px white;
+    margin: 10px;
+    display: none;
+}
+
+.articulo_r{
+    margin: 20px;
+}
+.texto_r{
+    color:black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+h4 {
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.boton_reviews{
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:  black;
+    font-family: 'Oswald', sans-serif;
+    border: solid 4px rgb(255, 225, 170);
+    border-radius: 5px;
+    background-color: rgb(255, 225, 170);
+}
+
+
+.texto1 {
+    color: rgb(255, 225, 170);
+    margin:0%;
+    font-size: 20px;
+    width:100%;
+    margin-left: 11px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.texto2 {
+    font-size: 15px;
+    margin-left: 11px;
+    color:white;
+    font-family: 'Oswald', sans-serif;
+}
+
+footer{
+    background-color:black;
+    height:250px;
+    margin-top: 25px;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px 8px 8px;
+}
+
+.icono {
+    margin: 3px 8px;
+}
+
+.contacto i {
+    font-size: 18px;
+    color: white;
+}
+
+.logo_tmdb {
+    width: 200px;
+    height: 80px;
+}
+
+.art2_footer{
+    display: flex;
+    justify-content: center;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    clip-path: circle(150% at 47% 45%);
+    background-color: #000000;
+    transition: clip-path 0.5s ease-in-out;
+  }
+
+  .loader2 {
+    clip-path: circle(0% at 47% 45%);
+  }
+
+@media (max-width:1024px) {
+
+    body {
+        width: auto;
+        margin-right: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 130px;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 16px;
+        margin: 0px 10px;
+    }
+
+    .caja2 {
+        margin-right: 30px;
+    }
+
+    input {
+        width: 250px;
+        height: 30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+
+    .articulo1{
+        justify-content: center;
+    }
+
+    h1{
+        justify-content: center;
+        display: flex;
+    }
+
+    .articulo_boton {
+        display: flex;
+        justify-content: center;
+    }
+
+    .caja2 {
+        margin-right: 30px;
+    }
+    .proveedores{
+        flex-wrap: wrap;
+    }
+
+    .imagen {
+        max-width: 300px;
+    }
+
+    .section_peli1{
+        width: 100%;
+    }
+    .section_peli2{
+        width: 98%;
+        margin-left: 0px;
+    }
+
+    .section_recomendaciones{
+        width: 98%;
+        justify-content: center;
+    }
+
+    .trailers {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+}
+
+
+@media (max-width:650px) {
+
+    .textonav {
+        font-size: 10.5px;
+        margin: 0px 5px;
+    }
+
+    input {
+        width: 172px;
+        height:25px;
+    }
+
+    button {
+        width: 35px;
+        height:25px;
+    }
+
+    .texto {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .articulo1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .proveedores{
+        flex-wrap: wrap;
+    }
+
+    .logo_prov{
+        max-width: 60px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    .texto_r{
+        font-size: 15px;
+    }
+
+    .contacto i {
+        font-size: 14px;
+    }
+}

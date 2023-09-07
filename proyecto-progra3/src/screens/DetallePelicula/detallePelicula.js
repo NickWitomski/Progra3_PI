@@ -1,11 +1,11 @@
-import React, { Component } from "react"
-import detailPelicula from "../../components/DetailPelicula/detailPelicula.js";
+import React, { Component } from "react";
+import DetailPelicula from "../../components/DetailPelicula/detailPelicula";
 
-class detallePelicula extends Component {
+class DetallePelicula extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pelicula: {},
+            pelicula: "",
             idPelicula: this.props.match.params.id
         }
     };
@@ -15,19 +15,23 @@ class detallePelicula extends Component {
             .then(resp => resp.json())
             .then(data =>
                 this.setState({
-                    pelicula: data.results
-                })
-            )
+                    pelicula: data
+                }))
             .catch(error => console.log(error))
     }
 
     render() {
         return (
-            console.log("hola"),
+            console.log("hola aca estan las props"),
+            console.log(this.props.match.params.id),
+            console.log(this.state.idPelicula),
+            console.log("aca esta detalle pelicula"),
             console.log(this.state.pelicula),
+            <DetailPelicula pelicula={this.state.pelicula}/>
             // <div>
             //     {this.state.pelicula ?
-            //         <detailPelicula titulo={this.state.pelicula.title} portada={this.state.pelicula.poster_path} fecha_de_estreno={this.state.pelicula.release_date} rating={this.state.pelicula.vote_average} sinopsis={this.state.pelicula.overview} duracion={this.state.pelicula.runtime} />
+            //     <detailPelicula pelicula={this.state.pelicula}/>
+            //         // <detailPelicula titulo={this.state.pelicula.original_title} portada={this.state.pelicula.poster_path} fecha_de_estreno={this.state.pelicula.release_date} rating={this.state.pelicula.vote_average} sinopsis={this.state.pelicula.overview} duracion={this.state.pelicula.runtime} />
             //         :
             //         <h3> Cargando ... </h3> 
             //     }
@@ -38,4 +42,4 @@ class detallePelicula extends Component {
 
 }
 
-export default detallePelicula;
+export default DetallePelicula;
