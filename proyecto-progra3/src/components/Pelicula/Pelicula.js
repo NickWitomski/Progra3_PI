@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import Home from "../../screens/Home/Home";
+// import React, { Component } from "react";
+import React from "react";
+// import Home from "../../screens/Home/Home";
 import "./Pelicula.css"
 
 // function Pelicula (props){
@@ -23,18 +24,23 @@ import "./Pelicula.css"
 //     constructor(props){
 //         super(props)
 //         this.state = {
-        
+
 //         }
 //     }
 
 // }
 
-function Pelicula (props){
-  return(
-    this.props.peliculas.map(pelicula =>
-      <p>{pelicula.title}</p>
-    )
+function Pelicula(props) {
+  return (
+    <React.Fragment>
+      {
+        props.peliculas.map(pelicula =>
+          <p>{pelicula.title}</p>
+        )
+      }
+    </React.Fragment>
   )
 }
 
 export default Pelicula;
+
