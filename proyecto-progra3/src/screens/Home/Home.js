@@ -7,7 +7,8 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      peliculas: []
+      peliculasPopulares: [],
+      peliculasCartelera: []
     }
   };
 
@@ -16,20 +17,30 @@ componentDidMount() {
     .then((res) => res.json())
     .then((data) =>
       this.setState({
-        peliculas: data.results,
+        peliculasPopulares: data.results,
       })
     )
     .catch(error => console.log(error));
+
+    // fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=399cd9827f714613d04693cee425808c")
+    // .then((res) => res.json())
+    // .then((dataCartelera) =>
+    //   this.setState({
+    //     peliculasCartelera: dataCartelera.results,
+    //   })
+    // )
+    // .catch(error => console.log(error));
 }
 
 render () {
   console.log("hola")
-  console.log(this.state.peliculas)
   return (
-    console.log(this.state.peliculas)
-    // this.state.peliculas.map((data,idx) => 
-    //   <Pelicula key={data + idx} peliculas={data}/>
-    // )
+    console.log("retorno"),
+    console.log(this.state.peliculasPopulares),
+    console.log(this.state.peliculasCartelera),
+    this.state.peliculasPopulares.map((data,idx) => 
+      <Pelicula key={data + idx} peliculas={data}/>
+    )
     //   <React.Fragment>
     //   <main>
     //      <h3> PELICULAS MÁS POPULARES </h3>

@@ -14,7 +14,7 @@ class detallePelicula extends Component {
             .then(resp => resp.json())
             .then(data =>
                 this.setState({
-                    pelicula: data
+                    pelicula: data.results
                 })
             )
             .catch(error => console.log(error))
