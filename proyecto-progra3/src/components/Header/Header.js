@@ -1,8 +1,8 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import './Header.css';
 
 function Header(){
-    let listaUno = ['HOME', 'FAVORITOS', 'GÉNEROS']
     return(
         <React.Fragment>
             <header>
@@ -10,8 +10,10 @@ function Header(){
                     <img className="logo" src="./img/Logo prog.jpg"/> 
 
                     <nav className="navegador">
-                        <ul> {listaUno.map((elemento)=>
-                            <li> <a className ="textonav" href="./index.html"> {elemento} </a> </li>)}
+                        <ul> 
+                            <li> <Link to='/'> HOME </Link></li>
+                            <li> <Link to='./Favoritos'> FAVORITOS </Link></li>
+                            <li> <Link to='/'> EL QUE FALTA </Link></li>
                         </ul>
                     </nav> 
                 </section>
