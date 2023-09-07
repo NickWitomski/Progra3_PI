@@ -1,6 +1,6 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 import DetallePelicula from "../../screens/DetallePelicula/detallePelicula.js";
-import "./detailPelicula.css"
+import "./detailPelicula.css";
 
 class DetailPelicula extends Component{
     constructor(props){
@@ -26,7 +26,7 @@ render(){
         <section className="section_peli1"> 
             <h1>{this.state.peliculaTraida.original_title}</h1>
             <article className="articulo1">
-                <img className="imagen" src={`https://image.tmdb.org/t/p/w500${this.state.peliculaTraida.poster_path}`}  alt={this.state.peliculaTraida.original_title} />
+                <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${this.state.peliculaTraida.poster_path}`}  alt={this.state.peliculaTraida.original_title} />
             </article>
         </section>
         <section className="section_peli2">
