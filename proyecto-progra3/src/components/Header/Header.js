@@ -10,17 +10,17 @@ function Header(){
                     <img className="logo" src="./img/Logo prog.jpg"/> 
 
                     <nav className="navegador">
-                        <ul> 
+                    <ul> 
                             <li> <Link to='/'> HOME </Link></li>
                             <li> <Link to='./Favoritos'> FAVORITOS </Link></li>
                             <li> <Link to='/'> EL QUE FALTA </Link></li>
                         </ul>
-                    </nav> 
+                    </nav>
                 </section>
                 <section className="caja2"> 
                     <form className= "formulario" action="search-results.html" method="GET">
-                        <input className="input" type ="text" value="" name="name" placeholder="Ingresa una película o serie"/>
-                        <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button> 
+                        <input className="input" type ="text" defaultValue="" name="name" placeholder="Ingresa una película o serie"/>
+                        <button type="submit"> <i className="fa-solid fa-magnifying-glass"></i></button> 
                     </form>
                     <p className="error"> </p> 
                 </section>
