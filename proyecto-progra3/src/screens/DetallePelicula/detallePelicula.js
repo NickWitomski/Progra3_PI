@@ -24,7 +24,8 @@ class detallePelicula extends Component {
     render() {
         return (
             console.log("hola"),
-            console.log(this.state.pelicula),
+            console.log(idPelicula),
+            console.log(this.state.pelicula)
             // <div>
             //     {this.state.pelicula ?
             //         <detailPelicula titulo={this.state.pelicula.title} portada={this.state.pelicula.poster_path} fecha_de_estreno={this.state.pelicula.release_date} rating={this.state.pelicula.vote_average} sinopsis={this.state.pelicula.overview} duracion={this.state.pelicula.runtime} />
