@@ -39,6 +39,8 @@ footer{
 
 .icono {
     margin: 3px 8px;
+    color: white;
+    display: grid;
 }
 
 .contacto i {
@@ -54,4 +56,10 @@ footer{
 .art2_footer{
     display: flex;
     justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+article {
+    margin: 20px 0px;
 }
