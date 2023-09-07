@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from './screens/Home/Home.js';
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
+import Favoritos from './screens/Favoritos/Favoritos.js';
 // import detallePelicula from './screens/DetallePelicula/detallePelicula';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Header/>
       <Switch>
       <Route path="/" exact={true} component={Home} />
-      {/* <Route path="/favoritos" component = {Favoritos}/> */}
+      <Route path="/favoritos" component = {Favoritos}/> 
       {/* <Route path="/detallePelicula" component={detallePelicula}/> */}
       </Switch>
       <Footer/>
