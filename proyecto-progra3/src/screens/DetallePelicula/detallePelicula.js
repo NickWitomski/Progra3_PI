@@ -5,18 +5,19 @@ class DetallePelicula extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pelicula: "",
+            peliculaLlego: [],
             idPelicula: this.props.match.params.id
         }
     };
 
     componentDidMount() {
-        fetch(`https://api.themoviedb.org/3/movie/${this.state.idPelicula}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
-            .then(resp => resp.json())
-            .then(data =>
+        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+            .then((res) => res.json())
+            .then((data) =>
                 this.setState({
-                    pelicula: data
-                }))
+                    peliculaLlego: data,
+                })
+            )
             .catch(error => console.log(error))
     }
 
@@ -26,9 +27,9 @@ class DetallePelicula extends Component {
             console.log("hola aca estan las props"),
             console.log(this.props.match.params.id),
             console.log(this.state.idPelicula),
-            console.log("aca esta detalle pelicula"),
-            console.log(this.state.pelicula),
-            <DetailPelicula pelicula={this.state.pelicula}/>
+            console.log("trajo las peliculas"),
+            console.log(this.state.peliculaLlego),
+            <DetailPelicula unaPelicula={[this.state.peliculaLlego]} />
             // <div>
             //     {this.state.pelicula ?
             //     <detailPelicula pelicula={this.state.pelicula}/>

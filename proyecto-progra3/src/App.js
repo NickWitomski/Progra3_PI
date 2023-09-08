@@ -8,6 +8,9 @@ import NoEncontrada from './screens/NoEncontrado/noEncontrado.js';
 import DetallePelicula from './screens/DetallePelicula/detallePelicula';
 import Loading from './components/Loading/Loading.js';
 
+
+
+
 function App() {
   return (
     <React.Fragment>
