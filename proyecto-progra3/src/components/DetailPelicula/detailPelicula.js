@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import DetallePelicula from "../../screens/DetallePelicula/detallePelicula.js";
+import DetallePelicula from "../../screens/DetallePelicula/detallePelicula.js"
 import "./detailPelicula.css";
 
 class DetailPelicula extends Component{
@@ -37,9 +37,9 @@ render(){
                 <p className="texto"> Duración: ${this.state.peliculaTraida.runtime} mins</p>
                 {/* <p className="texto"> Generos: ${listaGeneros}</p> */}
             </article>
-            {/* <article className="articulo_boton">
-                <button className="favoritos"> ${textoInicial} </button>
-            </article> */}
+             <article className="articulo_boton">
+                <button className="favoritos"> ${this.state.peliculaTraida.textoInicial} </button>
+            </article> 
         </section>
             
         </React.Fragment>
