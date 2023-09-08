@@ -10,7 +10,8 @@ class Pelicula extends Component {
       peliculasArray: this.props.peliculas,
       texto: "Ver descripcion",
       descripcion: this.props.peliculas.overview,
-      descripcionMostrada: true
+      descripcionMostrada: true,
+      textoBotonFavs: "Agregar a favoritos"
     }
   }
   metodoVerDescripcion(){
@@ -25,6 +26,46 @@ class Pelicula extends Component {
             descripcionMostrada: true
         })
     }
+  }
+
+  componentDidMount(){
+    //Necesito ver si el id esta en el array de favs
+    let chequearStorage = localStorage.getItem('favs')
+
+    if(chequearStorage !== null){
+      let favs = JSON.parse(chequearStorage)
+      //Ahors si es nullo, cambio el texto
+      if(favs.includes(this.props.peliculasArray.id)){
+        this.setState({textoBotonFavs: "Eliminar de favoritos"})
+      }
+    }
+  }
+
+  agregarySacarDeFavoritos(id){
+    let favs = []
+    let chequearStorage = localStorage.getItem('favs');
+
+    if(chequearStorage !== null){
+      //Agregar el id
+      favs = JSON.parse(chequearStorage)
+    }
+
+    if(favs.includes(id)){
+      //sacar el id
+      favs = favs.filter(i => i !== id)
+      //Cambiar el texto del boton
+      this.setState({textoBotonFavs: "Agregar a favoritos"})
+    }else{
+      favs.push(id);
+      this.setState({textoBotonFavs: "Eliminar de favoritos"})
+    }
+
+    //Guardar los cambios en el localStorage (sonvertir en strings)
+
+    let favsToStrings = JSON.stringify(favs);
+    localStorage.setItem('favs', favsToStrings);
+
+    console.log(localStorage)
   }
 
   render() {
