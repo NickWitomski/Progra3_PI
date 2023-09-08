@@ -5,12 +5,17 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
 import Favoritos from './screens/Favoritos/Favoritos.js';
 import NoEncontrada from './screens/NoEncontrado/noEncontrado.js';
-import DetallePelicula from "./screens/DetallePelicula/DetallePelicula.js"
+import DetallePelicula from './screens/DetallePelicula/detallePelicula';
+import Loading from './components/Loading/Loading.js';
+
+
+
 
 function App() {
   return (
     <React.Fragment>
       <Header/>
+      <Loading/>
       <Switch>
       <Route path="/" exact={true} component={Home} />
       <Route path="/favoritos" exact = {true} component={Favoritos}/> 
