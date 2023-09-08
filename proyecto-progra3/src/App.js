@@ -13,8 +13,8 @@ function App() {
       <Header/>
       <Switch>
       <Route path="/" exact={true} component={Home} />
-      <Route path="/favoritos" component={Favoritos}/> 
-      <Route path="/detallePelicula/:id" component={DetallePelicula}></Route>
+      <Route path="/favoritos" exact = {true} component={Favoritos}/> 
+      <Route path="/detallePelicula/:id" exact = {true} component={DetallePelicula}></Route>
       <Route component={NoEncontrada}></Route>
       </Switch>
       <Footer/>
