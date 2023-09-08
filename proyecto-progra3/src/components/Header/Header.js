@@ -12,13 +12,13 @@ function Header(){
                     <nav className="navegador">
                     <ul> 
                             <li> <Link to='/'> HOME </Link></li>
-                            <li> <Link to='./Favoritos'> FAVORITOS </Link></li>
+                            <li> <Link to='/Favoritos'> FAVORITOS </Link></li>
                             <li> <Link to='/'> EL QUE FALTA </Link></li>
                         </ul>
                     </nav>
                 </section>
                 <section className="caja2"> 
-                    <form className= "formulario" action="search-results.html" method="GET">
+                    <form className= "formulario" action="/searchResults" method="GET">
                         <input className="input" type ="text" defaultValue="" name="name" placeholder="Ingresa una película o serie"/>
                         <button type="submit"> <i className="fa-solid fa-magnifying-glass"></i></button> 
                     </form>

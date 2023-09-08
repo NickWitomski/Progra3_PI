@@ -1,0 +1,413 @@
+* {
+    box-sizing:border-box
+}
+
+p {
+    color: rgb(255, 225, 170);
+}
+
+body {
+    background: linear-gradient(to right, #000000, #434343);
+    background-repeat: no-repeat;
+    background-size: fit-content;
+    background-attachment: fixed;
+    margin:0px;
+}
+
+.fecha{
+    color:rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    padding: 8px;
+    height: 100px;
+}
+
+
+.caja1 {
+    display:flex;
+}
+
+.caja2 {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.error{
+    color:white;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.logo {
+    height:10vh;
+}
+
+ul {
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
+
+.navegador {
+    display: flex;
+    align-items: center;
+}
+
+.textonav {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.formulario {
+    display: flex;
+    align-self: center;
+}
+
+input {
+    width: 300px;
+    height: 35px;
+}
+
+button {
+    width: 40px;
+    height: 35px;
+}
+
+.texto1 {
+    color: rgb(255, 225, 170);
+    margin:0%;
+    font-size: 20px;
+    width:100%;
+    margin-left: 11px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.texto2 {
+    font-size: 15px;
+    margin-left: 11px;
+    color:white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.busqueda {
+    display: block;
+    color:rgb(255, 225, 170);
+    width:100%;
+    display: flex;
+    height:5%;
+    font-size: 184%;
+    font-family: oswald, sans-serif;
+    margin-bottom: 12px;
+    margin-left: 11px;
+
+}
+
+article {
+    margin: 20px 0px;
+}
+
+.articulo{
+    flex-wrap: wrap;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen {
+    width: 250px;
+    height: 400px;
+    border: solid rgb(255, 225, 170) 5px;
+    margin: 0px 10px;
+}
+
+h1 {
+    color: rgb(255, 225, 170);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 20px;
+}
+
+h5{
+    color:rgb(255, 225, 170);
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.section_pel{
+    display: flex;
+    margin-bottom: 25px;
+}
+
+footer{
+    background-color:black;
+    height:250px;
+    margin-top: 25px;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px 8px 8px;
+}
+
+.icono {
+    margin: 3px 8px;
+}
+
+.contacto i {
+    font-size: 18px;
+    color: white;
+}
+
+.logo_tmdb {
+    width: 200px;
+    height: 80px;
+}
+
+.art2_footer{
+    display: flex;
+    justify-content: center;
+}
+.boton_ver_ahora {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255, 225, 170);
+    border: solid 4px rgb(255, 225, 170);
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 118px;
+    height: 42px;
+    margin-left: 60px;
+    border-radius: 6px;
+}
+
+.verahora {
+    background-color: rgb(255, 225, 170);
+    color: black;
+    text-decoration: none;
+}
+
+.textonav {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.categoria1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.categoria2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    clip-path: circle(150% at 47% 45%);
+    background-color: #000000;
+    transition: clip-path 0.5s ease-in-out;
+  }
+
+  .loader2 {
+    clip-path: circle(0% at 47% 45%);
+  }
+
+@media (max-width:1024px) {
+
+    .articulo{
+        flex-wrap: wrap;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoria1 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    .categoria2 {
+        display: flex;
+        flex-wrap: wrap;   
+    }
+
+    body {
+        width: auto;
+        margin-right: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .caja1 {
+        display: flex;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .textonav {
+        font-size: 65%;
+        margin: 0px 30px;
+    }
+
+
+    .caja2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    input {
+        width:80%;
+        height:30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+    .formulario {
+        align-items: flex-end;
+    }
+
+    .busqueda {
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulobusqueda {
+        font-size: 35px;
+    }
+
+    .section_pel {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .boton_ver_ahora {
+        margin-left: 75px;
+    }
+}
+
+
+@media (max-width:650px) {
+
+    .textonav {
+        font-size: 70%;
+        margin: 0px 0px;
+    }
+
+    input {
+        height:25px;
+    }
+
+    button {
+        height:25px;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .titulobusqueda {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 30px;
+        color: rgb(255, 225, 170);
+    }
+
+    .texto1 {
+        font-size: 15px;
+    }
+
+    .contacto i {
+        font-size: 14px;
+    }
+
+}

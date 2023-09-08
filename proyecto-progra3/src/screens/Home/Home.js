@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
 
@@ -42,6 +43,7 @@ class Home extends Component {
       console.log(this.state.peliculasCartelera),
       <React.Fragment>
         <h3> PELICULAS MÁS POPULARES </h3>
+        <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria1">
           {this.state.peliculasPopulares.map((data, idx) =>
             <Pelicula key={data + idx} peliculas={[data]} />
@@ -49,6 +51,7 @@ class Home extends Component {
         </section>
 
         <h3> PELICULAS EN CARTELERA </h3>
+        <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria2">
           {this.state.peliculasCartelera.map((data, idx) =>
             <Pelicula key={data + idx} peliculas={[data]} />

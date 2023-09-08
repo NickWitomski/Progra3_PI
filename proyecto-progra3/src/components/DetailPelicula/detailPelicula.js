@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import DetallePelicula from "../../screens/DetallePelicula/detallePelicula";
+import DetallePelicula from "../../screens/DetallePelicula/DetallePelicula";
 import "./detailPelicula.css";
 
 class DetailPelicula extends Component{
@@ -7,7 +7,9 @@ class DetailPelicula extends Component{
         super(props)
         this.state = {
             textoFavoritos: "Agregar a favoritos",
-            peliculaTraida: this.props.unaPelicula
+            peliculaTraida: this.props.unaPelicula,
+            generosTraidos: this.props.generos,
+            listaGeneros: [],
         }
     }
 
@@ -35,10 +37,13 @@ render(){
                 <p className="texto"> Rating: ${this.state.peliculaTraida.vote_average}</p>
                 <p className="texto"> Sinopsis: ${this.state.peliculaTraida.overview}</p>
                 <p className="texto"> Duración: ${this.state.peliculaTraida.runtime} mins</p>
-                {/* <p className="texto"> Generos: ${listaGeneros}</p> */}
+                {/* {this.state.generosTraidos.map((genero,idx)=>
+                    this.state.listaGeneros.push(genero)
+                )}
+                <p>Generos:{this.state.listaGeneros}</p> */}
             </article>
              <article className="articulo_boton">
-                <button className="favoritos"> ${this.state.peliculaTraida.textoInicial} </button>
+                {/* <button className="favoritos"> ${this.state.peliculaTraida.textoInicial} </button> */}
             </article> 
         </section>
             

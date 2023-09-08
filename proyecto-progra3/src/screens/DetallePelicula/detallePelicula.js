@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DetailPelicula from "../../components/DetailPelicula/detailPelicula";
+import DetailPelicula from "../../components/DetailPelicula/DetailPelicula";
 
 class DetallePelicula extends Component {
     constructor(props) {
@@ -29,7 +29,10 @@ class DetallePelicula extends Component {
             console.log(this.state.idPelicula),
             console.log("trajo las peliculas"),
             console.log(this.state.peliculaLlego),
-            <DetailPelicula unaPelicula={[this.state.peliculaLlego]} />
+            console.log("generos"),
+            console.log(this.state.peliculaLlego.genres),
+
+            <DetailPelicula unaPelicula={[this.state.peliculaLlego]} generos={this.state.peliculaLlego.genres} />
             // <div>
             //     {this.state.pelicula ?
             //     <detailPelicula pelicula={this.state.pelicula}/>

@@ -5,9 +5,9 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
 import Favoritos from './screens/Favoritos/Favoritos.js';
 import NoEncontrada from './screens/NoEncontrado/noEncontrado.js';
-import DetallePelicula from './screens/DetallePelicula/detallePelicula';
+import DetallePelicula from './screens/DetallePelicula/DetallePelicula.js';
 import Loading from './components/Loading/Loading.js';
-
+import VerTodas from "./screens/VerTodas/VerTodas.js";
 
 
 
@@ -18,6 +18,8 @@ function App() {
       <Loading/>
       <Switch>
       <Route path="/" exact={true} component={Home} />
+      <Route path="/verTodas" component={VerTodas} />
+      <Route path="/searchResults" component={VerTodas} />
       <Route path="/favoritos" exact = {true} component={Favoritos}/> 
       <Route path="/detallePelicula/:id" exact = {true} component={DetallePelicula}></Route>
       <Route component={NoEncontrada}></Route>
