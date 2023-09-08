@@ -20,7 +20,7 @@ class DetailPelicula extends Component{
    
 render(){
     return(
-        console.log("hola estamod en"),
+        console.log("llego la peli a detail?"),
         console.log(this.state.peliculaTraida),
         <React.Fragment>
         <section className="section_peli1"> 
