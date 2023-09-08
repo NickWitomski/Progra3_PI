@@ -28,45 +28,45 @@ class Pelicula extends Component {
     }
   }
 
-  componentDidMount(){
-    //Necesito ver si el id esta en el array de favs
-    let chequearStorage = localStorage.getItem('favs')
+  // componentDidMount(){
+  //   //Necesito ver si el id esta en el array de favs
+  //   let chequearStorage = localStorage.getItem('favs')
 
-    if(chequearStorage !== null){
-      let favs = JSON.parse(chequearStorage)
-      //Ahors si es nullo, cambio el texto
-      if(favs.includes(this.props.peliculasArray.id)){
-        this.setState({textoBotonFavs: "Eliminar de favoritos"})
-      }
-    }
-  }
+  //   if(chequearStorage !== null){
+  //     let favs = JSON.parse(chequearStorage)
+  //     //Ahors si es nullo, cambio el texto
+  //     if(favs.includes(this.state.match.params.id)){
+  //       this.setState({textoBotonFavs: "Eliminar de favoritos"})
+  //     }
+  //   }
+  // }
 
-  agregarySacarDeFavoritos(id){
-    let favs = []
-    let chequearStorage = localStorage.getItem('favs');
+  // agregarySacarDeFavoritos(id){
+  //   let favs = []
+  //   let chequearStorage = localStorage.getItem('favs');
 
-    if(chequearStorage !== null){
-      //Agregar el id
-      favs = JSON.parse(chequearStorage)
-    }
+  //   if(chequearStorage !== null){
+  //     //Agregar el id
+  //     favs = JSON.parse(chequearStorage)
+  //   }
 
-    if(favs.includes(id)){
-      //sacar el id
-      favs = favs.filter(i => i !== id)
-      //Cambiar el texto del boton
-      this.setState({textoBotonFavs: "Agregar a favoritos"})
-    }else{
-      favs.push(id);
-      this.setState({textoBotonFavs: "Eliminar de favoritos"})
-    }
+  //   if(favs.includes(this.state.match.params.id)){
+  //     //sacar el id
+  //     favs = favs.filter(i => i !== id)
+  //     //Cambiar el texto del boton
+  //     this.setState({textoBotonFavs: "Agregar a favoritos"})
+  //   }else{
+  //     favs.push(id);
+  //     this.setState({textoBotonFavs: "Eliminar de favoritos"})
+  //   }
 
-    //Guardar los cambios en el localStorage (sonvertir en strings)
+  //   //Guardar los cambios en el localStorage (sonvertir en strings)
 
-    let favsToStrings = JSON.stringify(favs);
-    localStorage.setItem('favs', favsToStrings);
+  //   let favsToStrings = JSON.stringify(favs);
+  //   localStorage.setItem('favs', favsToStrings);
 
-    console.log(localStorage)
-  }
+  //   console.log(localStorage)
+  // }
 
   render() {
     return (
@@ -79,7 +79,7 @@ class Pelicula extends Component {
           </button>
           <p className={this.state.descripcionMostrada ? "MostrarDescripcion" : "OcultarDescripcion"}>{pelicula.overview}</p>
           <button className="botonPelicula" > <Link to={`/detallePelicula/${pelicula.id}`}> Ir a detalle </Link> </button>
-          <button className="botonPelicula" > Agregar a favoritos</button>
+          <button className="botonPelicula" onClick = {() => this.agregarySacarDeFavoritos(this.state.match.params.id)} type='button'> Agregar a favoritos</button>
         </article>
       )
 
