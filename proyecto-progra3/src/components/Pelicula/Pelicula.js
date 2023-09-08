@@ -9,20 +9,23 @@ class Pelicula extends Component {
     this.state = {
       peliculasArray: this.props.peliculas,
       texto: "Ver descripcion",
-      descripcion: this.props.peliculas.overview
+      descripcion: this.props.peliculas.overview,
+      descripcionMostrada: true
     }
   }
   metodoVerDescripcion(){
     if (this.state.texto === "Ver descripcion"){
         this.setState ({
-            texto: "Ocultar descripcion"
+            texto: "Ocultar descripcion",
+            descripcionMostrada: false 
         })
     } else{
         this.setState ({
             texto: "Ver descripcion",
+            descripcionMostrada: true
         })
     }
-}
+  }
 
   render() {
     return (
@@ -30,10 +33,10 @@ class Pelicula extends Component {
         <article className="articulo">
           <img className="imagen" src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`} alt={pelicula.title} />
           <p className="titulocategorias">{pelicula.title}</p>
-          <p className="descripcion">{pelicula.overview}</p>
           <button className="botonPelicula" onClick= {() => this.metodoVerDescripcion()}> 
           {this.state.texto}
           </button>
+          <p className={this.state.descripcionMostrada ? "MostrarDescripcion" : "OcultarDescripcion"}>{pelicula.overview}</p>
           <button className="botonPelicula" > <Link to={`/detallePelicula/${pelicula.id}`}> Ir a detalle </Link> </button>
           <button className="botonPelicula" > Agregar a favoritos</button>
         </article>

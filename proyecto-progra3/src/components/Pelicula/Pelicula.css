@@ -26,14 +26,24 @@ article {
     display:block;
 }
 
-.descripcion{
+
+.botonPelicula {
+    width: 75px;
+    height: 35px;
+}
+
+.MostrarDescripcion{
+    display: none;
     background-color: rgb(255, 225, 170);
     border-radius: 7px;
     padding: 3px;
     text-align: justify;
 }
 
-.botonPelicula {
-    width: 75px;
-    height: 35px;
+.OcultarDescripcion{
+    display:block;
+    background-color: rgb(255, 225, 170);
+    border-radius: 7px;
+    padding: 3px;
+    text-align: justify;
 }

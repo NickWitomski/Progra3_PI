@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
 import Favoritos from './screens/Favoritos/Favoritos.js';
 import NoEncontrada from './screens/NoEncontrado/noEncontrado.js';
-import DetallePelicula from './screens/DetallePelicula/detallePelicula';
+import DetallePelicula from "./screens/DetallePelicula/DetallePelicula.js"
 
 function App() {
   return (

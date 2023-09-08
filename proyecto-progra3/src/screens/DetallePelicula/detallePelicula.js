@@ -28,7 +28,7 @@ class DetallePelicula extends Component {
             console.log(this.state.idPelicula),
             console.log("aca esta detalle pelicula"),
             console.log(this.state.pelicula),
-            <DetailPelicula pelicula={this.state.pelicula}/>
+            <DetailPelicula unaPelicula={[this.state.pelicula]}/>
             // <div>
             //     {this.state.pelicula ?
             //     <detailPelicula pelicula={this.state.pelicula}/>

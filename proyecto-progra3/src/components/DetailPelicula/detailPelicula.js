@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import DetallePelicula from "../../screens/DetallePelicula/detallePelicula.js";
+import DetallePelicula from "../../screens/DetallePelicula/DetallePelicula";
 import "./detailPelicula.css";
 
 class DetailPelicula extends Component{
@@ -7,7 +7,7 @@ class DetailPelicula extends Component{
         super(props)
         this.state = {
             textoFavoritos: "Agregar a favoritos",
-            peliculaTraida: this.props.pelicula
+            peliculaTraida: this.props.unaPelicula
         }
     }
 
