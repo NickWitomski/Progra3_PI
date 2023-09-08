@@ -1,23 +1,9 @@
-import React, {Component} from "react";
-import './Favoritos.css';
+import React from "react";
 
-class Favoritos extends Component {
-    constructor(){
-        super();
-        this.state = {
-            favs : [],
-        };
-    }
-
-    render(){
-        console.log(this.state.favs)
-        return(
-            <React.Fragment>
-
-            </React.Fragment>
-        )
-
-    }
+function Favoritos(){
+    return(
+        <h1> Favotitos </h1>
+    )
 }
 
 export default Favoritos;
