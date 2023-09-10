@@ -1,3 +1,6 @@
+* {
+    box-sizing:border-box
+}
 header {
     display: flex;
     flex-direction: row;
@@ -6,9 +9,33 @@ header {
     padding: 8px;
     height: 100px;
 }
+.logo {
+    height: 95%;
+}
+
+ul {
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: disc;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+a.link {
+    color: rgb(255, 225, 170);
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin: 0px 10px;
+    font-family: 'Oswald', sans-serif;
+}
 
 .caja1 {
-    display:flex;
+    display: flex;
 }
 
 .caja2 {
@@ -17,15 +44,6 @@ header {
     flex-direction: column;
 }
 
-.logo {
-    height:95%;
-}
-
-ul {
-    display: flex;
-    padding-inline-start: 0px;
-    list-style-type: none;
-}
 
 
 .navegador {

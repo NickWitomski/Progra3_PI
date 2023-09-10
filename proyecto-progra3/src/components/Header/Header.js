@@ -11,9 +11,9 @@ function Header(){
 
                     <nav className="navegador">
                     <ul> 
-                            <li> <Link to='/'> HOME </Link></li>
-                            <li> <Link to='/Favoritos'> FAVORITOS </Link></li>
-                            <li> <Link to='/'> EL QUE FALTA </Link></li>
+                            <li> <Link to='/' className="link"> HOME </Link></li>
+                            <li> <Link to='/Favoritos' className="link"> FAVORITOS </Link></li>
+                            <li> <Link to='/'className="link"> EL QUE FALTA </Link></li>
                         </ul>
                     </nav>
                 </section>
