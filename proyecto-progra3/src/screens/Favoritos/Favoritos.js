@@ -2,7 +2,7 @@ import React from "react";
 
 function Favoritos(){
     return(
-        <h1> Favotitos </h1>
+        <h1> Favoritos </h1>
     )
 }
 
