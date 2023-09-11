@@ -17,13 +17,13 @@ function Header(){
                         </ul>
                     </nav>
                 </section>
-                <section className="caja2"> 
+                {/* <section className="caja2"> 
                     <form className= "formulario" action="/searchResults" method="GET">
                         <input className="input" type ="text" defaultValue="" name="name" placeholder="Ingresa una película o serie"/>
                         <button type="submit"> <i className="fa-solid fa-magnifying-glass"></i></button> 
                     </form>
                     <p className="error"> </p> 
-                </section>
+                </section> */}
             </header>
         </React.Fragment>
     

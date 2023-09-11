@@ -11,6 +11,7 @@ class DetallePelicula2 extends Component {
     };
 
     componentDidMount() {
+        console.log("Nicky pete, pero muy pete")
         fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
             .then((res) => res.json())
             .then((data) =>

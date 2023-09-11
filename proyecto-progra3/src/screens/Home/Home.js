@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
+import FormDeBusqueda from "../../components/SearchResults/FormDeBusqueda";
 
 
 class Home extends Component {
@@ -42,6 +43,7 @@ class Home extends Component {
       console.log(this.state.peliculasPopulares),
       console.log(this.state.peliculasCartelera),
       <React.Fragment>
+        <FormDeBusqueda/>
         <h3> PELICULAS MÁS POPULARES </h3>
         <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria1">
