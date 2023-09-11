@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import DetailPelicula from "../../components/DetailPelicula/DetailPelicula";
+import DetailPelicula2 from "../../components/DetailPelicula/DetailPelicula2";
 
-class DetallePelicula extends Component {
+class DetallePelicula2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,16 +23,13 @@ class DetallePelicula extends Component {
 
     render() {
         return (
-
-            console.log("hola aca estan las props"),
-            console.log(this.props.match.params.id),
-            console.log(this.state.idPelicula),
             console.log("trajo las peliculas"),
             console.log(this.state.peliculaLlego),
             console.log("generos"),
             console.log(this.state.peliculaLlego.genres),
-
-            <DetailPelicula unaPelicula={[this.state.peliculaLlego]} generos={this.state.peliculaLlego.genres} />
+            <article>
+            <DetailPelicula2 portada={this.state.peliculaLlego.poster_path} titulo={this.state.peliculaLlego.original_title} fecha={this.state.peliculaLlego.release_date} rating={this.state.peliculaLlego.vote_average} sinopsis={this.state.peliculaLlego.overview} duracion={this.state.runtime} generos={[this.state.genres]}/>
+            </article>
             // <div>
             //     {this.state.pelicula ?
             //     <detailPelicula pelicula={this.state.pelicula}/>
@@ -47,4 +44,4 @@ class DetallePelicula extends Component {
 
 }
 
-export default DetallePelicula;
+export default DetallePelicula2;

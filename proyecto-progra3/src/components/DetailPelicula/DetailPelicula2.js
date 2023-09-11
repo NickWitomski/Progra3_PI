@@ -1,15 +1,20 @@
 import React, {Component} from "react";
-import DetallePelicula from "../../screens/DetallePelicula/DetallePelicula";
 import "./detailPelicula.css";
+import DetallePelicula2 from "../../screens/DetallePelicula/DetallePelicula2";
 
-class DetailPelicula extends Component{
+class DetailPelicula2 extends Component{
     constructor(props){
         super(props)
         this.state = {
             textoFavoritos: "Agregar a favoritos",
-            peliculaTraida: this.props.unaPelicula,
             generosTraidos: this.props.generos,
             listaGeneros: [],
+            titulo: this.props.titulo,
+            foto: this.props.portada,
+            rating: this.props.rating,
+            sinopsis: this.props.sinopsis,
+            duracion: this.props.duracion,
+            fecha_de_estreno: this.props.fecha
         }
     }
 
@@ -22,26 +27,25 @@ class DetailPelicula extends Component{
    
 render(){
     return(
-        console.log("llego la peli a detail?"),
-        console.log(this.state.peliculaTraida),
+        console.log(this.state.duracion),
         <React.Fragment>
         <section className="section_peli1"> 
-            <h1>{this.state.peliculaTraida.original_title}</h1>
+            <h1>{this.state.titulo}</h1>
             <article className="articulo1">
-                <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${this.state.peliculaTraida.poster_path}`}  alt={this.state.peliculaTraida.original_title} />
+                <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${this.state.foto}`}  alt={this.state.titulo} />
             </article>
         </section>
         <section className="section_peli2">
             <article class="articulo2">
-                <p className="texto"> Fecha de estreno: {this.state.peliculaTraida.release_date}</p>
-                <p className="texto"> Rating: ${this.state.peliculaTraida.vote_average}</p>
-                <p className="texto"> Sinopsis: ${this.state.peliculaTraida.overview}</p>
-                <p className="texto"> Duración: ${this.state.peliculaTraida.runtime} mins</p>
-                {/* {this.state.generosTraidos.map((genero,idx)=>
+                <p className="texto"> Fecha de estreno: {this.state.fecha_de_estreno}</p>
+                <p className="texto"> Rating: {this.state.rating}</p>
+                <p className="texto"> Sinopsis: {this.state.sinopsis}</p>
+                <p className="texto"> Duración: {`${this.state.duracion} mins`}</p> 
+                {this.state.generosTraidos.map((genero,idx)=>
                     this.state.listaGeneros.push(genero)
                 )}
-                <p>Generos:{this.state.listaGeneros}</p> */}
-            </article>
+                <p>Generos:{this.state.listaGeneros}</p>
+            {/* </article>
              <article className="articulo_boton">
                 {/* <button className="favoritos"> ${this.state.peliculaTraida.textoInicial} </button> */}
             </article> 
@@ -50,4 +54,4 @@ render(){
         </React.Fragment>
     )
 }}
-export default DetailPelicula;
+export default DetailPelicula2;
