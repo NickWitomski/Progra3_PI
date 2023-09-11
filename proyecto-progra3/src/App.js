@@ -9,7 +9,6 @@ import Loading from './components/Loading/Loading.js';
 import VerTodas from "./screens/VerTodas/VerTodas.js";
 import DetallePelicula2 from './screens/DetallePelicula/DetallePelicula2.js';
 import Pelicula from "./components/Pelicula/Pelicula";
-import SearchResults from "./screens/SearchResults/SearchResults"
 
 
 
@@ -21,7 +20,6 @@ function App() {
       <Switch>
       <Route path="/" exact={true} component={Home} />
       <Route path="/verTodas" component={VerTodas} />
-      <Route path="/searchResults" component={SearchResults} />
       <Route path="/favoritos" exact = {true} component={Favoritos}/> 
       <Route path="/detallePelicula/:id" exact = {true} component={DetallePelicula2}></Route>
       <Route component={NoEncontrada}></Route>
