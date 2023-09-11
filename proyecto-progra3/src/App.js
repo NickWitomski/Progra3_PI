@@ -8,8 +8,6 @@ import NoEncontrada from './screens/NoEncontrado/noEncontrado.js';
 import Loading from './components/Loading/Loading.js';
 import VerTodas from "./screens/VerTodas/VerTodas.js";
 import DetallePelicula2 from './screens/DetallePelicula/DetallePelicula2.js';
-import Pelicula from "./components/Pelicula/Pelicula";
-
 
 
 function App() {

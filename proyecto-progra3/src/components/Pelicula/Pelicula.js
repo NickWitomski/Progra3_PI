@@ -45,7 +45,7 @@ class Pelicula extends Component {
     }
   }
   
-  agregarySacarDeFavoritos(id){
+  agregarySacarDeFavoritos(idBuscado){
     let favs = []
     let chequearStorage = localStorage.getItem('favs');
 
@@ -56,17 +56,17 @@ class Pelicula extends Component {
 
     if(favs.includes(this.state.id)){
       //sacar el id
-      favs = favs.filter(i => i !== id)
+      favs = favs.filter(i => i !== idBuscado)
       //Cambiar el texto del boton
       this.setState({
         textoBotonFavs: "Agregar a favoritos"})
     }else{
-      favs.push(id);
+      favs.push(idBuscado);
       this.setState({
         textoBotonFavs: "Eliminar de favoritos"})
     }
 
-    //Guardar los cambios en el localStorage (sonvertir en strings)
+    //Guardar los cambios en el localStorage (convertir en strings)
 
     let favsToStrings = JSON.stringify(favs);
     localStorage.setItem('favs', favsToStrings);
@@ -87,7 +87,7 @@ class Pelicula extends Component {
           </button>
           <p className={this.state.descripcionMostrada ? "MostrarDescripcion" : "OcultarDescripcion"}>{pelicula.overview}</p>
           <button className="botonPelicula" > <Link to={`/detallePelicula/${pelicula.id}`}> Ir a detalle </Link> </button>
-          <button onClick= {() => this.agregarySacarDeFavoritos()} className="botonPelicula"  type='button'> Agregar a favoritos</button>
+          <button onClick= {() => this.agregarySacarDeFavoritos(pelicula.id)} className="botonPelicula" >{this.state.textoBotonFavs}</button>
         </article>
       )
 
