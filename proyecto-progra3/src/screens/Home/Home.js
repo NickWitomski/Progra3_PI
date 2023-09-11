@@ -48,7 +48,7 @@ class Home extends Component {
         <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria1">
           {this.state.peliculasPopulares.map((data, idx) =>
-            <Pelicula key={data + idx} peliculas={[data]} />
+            <Pelicula key={data + idx} peliculas={data} />
           )}
         </section>
 
@@ -56,7 +56,7 @@ class Home extends Component {
         <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria2">
           {this.state.peliculasCartelera.map((data, idx) =>
-            <Pelicula key={data + idx} peliculas={[data]} />
+            <Pelicula key={data + idx} peliculas={data} />
           )}
         </section>
       </React.Fragment>
