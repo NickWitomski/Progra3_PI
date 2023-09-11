@@ -1,37 +1,33 @@
-/* Estilos para el componente de carga en CSS */
+
 .loading {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0.8); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+    z-index: 9999; 
   }
   
-  /* Estilos para el contenido del componente de carga */
   .loading-content {
     text-align: center;
-    background-color: white; /* Fondo del contenido */
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
   }
   
-  /* Estilos para el GIF de carga */
   .loading-content img {
     max-width: 100%;
     max-height: 100%;
   }
   
-  /* Estilos para el texto "Cargando..." */
   .loading-content p {
     margin-top: 16px;
   }
   
-  /* Clases para mostrar/ocultar el componente de carga */
   .visible {
     display: block !important;
   }

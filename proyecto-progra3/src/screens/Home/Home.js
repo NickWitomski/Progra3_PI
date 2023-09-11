@@ -3,14 +3,15 @@ import {Link} from "react-router-dom";
 import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import FormDeBusqueda from "../../components/SearchResults/FormDeBusqueda";
+import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
 
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      peliculasPopulares: [],
-      peliculasCartelera: []
+      peliculasPopulares: false,
+      peliculasCartelera: false
     }
   };
 
@@ -47,17 +48,13 @@ class Home extends Component {
         <h3> PELICULAS MÁS POPULARES </h3>
         <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria1">
-          {this.state.peliculasPopulares.map((data, idx) =>
-            <Pelicula key={data + idx} peliculas={data} />
-          )}
+          <PeliculasContainer movies={this.state.peliculasPopulares}/>
         </section>
 
         <h3> PELICULAS EN CARTELERA </h3>
         <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria2">
-          {this.state.peliculasCartelera.map((data, idx) =>
-            <Pelicula key={data + idx} peliculas={data} />
-          )}
+        <PeliculasContainer movies={this.state.peliculasCartelera}/>
         </section>
       </React.Fragment>
     )
