@@ -18,9 +18,9 @@ function App() {
       <Switch>
       <Route path="/" exact={true} component={Home} />
       <Route path="/verTodas" component={VerTodas} />
-      <Route path="/favoritos" exact = {true} component={Favoritos}/> 
-      <Route path="/detallePelicula/:id" exact = {true} component={DetallePelicula2}></Route>
-      <Route component={NoEncontrada}></Route>
+      <Route path="/favoritos/:id" exact = {true} component={Favoritos}/> 
+      <Route path="/detallePelicula/:id" exact = {true} component={DetallePelicula2}/>
+      <Route component={NoEncontrada}/>
       </Switch>
       <Footer/>
     </React.Fragment>

@@ -44,7 +44,7 @@ render(){
                 {this.state.generosTraidos.map((genero,idx)=>
                     this.state.listaGeneros.push(genero)
                 )}
-                <p>Generos:{this.state.listaGeneros}</p>
+                <p>Géneros:{this.state.listaGeneros}</p>
             {/* </article>
              <article className="articulo_boton">
                 {/* <button className="favoritos"> ${this.state.peliculaTraida.textoInicial} </button> */}
