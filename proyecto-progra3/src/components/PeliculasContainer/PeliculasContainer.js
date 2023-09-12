@@ -1,21 +1,30 @@
-import React from "react";
-import Pelicula from "../Pelicula/Pelicula"
+import React, {Component} from "react";
+import Pelicula from "../Pelicula/Pelicula";
+import Home from "../../screens/Home/Home";
 
-function PeliculasContainer (props){
-    return (
-        <>
-        {props.movies ?
-        <React.Fragment>
-        {props.moviesPopulares.map((data, idx) =>
-            <Pelicula key={data + idx} peliculas={data} />)}
-        {props.moviesCartelera.map((data, idx) =>
-            <Pelicula key={data + idx} peliculas={data} />)}
+class PeliculasContainer extends Component{
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //       populares: this.props.moviesPopulares,
+    //       cartelera: this.props.moviesCartelera,
+    //     }
+    // }
+
+    //     render (){
+    //        return(
+    //         <React.Fragment>
+    //         {this.state.populares.map((data, idx) =>
+    //            <Pelicula key={data + idx} peliculas={data} />)}
+    //         {this.state.cartelera.map((data, idx) =>
+    //            <Pelicula key={data + idx} peliculas={data} />)}
+
+    //         </React.Fragment>
+    //         )
+
         
-            </React.Fragment>
-           :
-          <h2>Loading...</h2>
-}
-          </>
-    ) 
+    // }
+        
 }
 export default PeliculasContainer;
