@@ -6,34 +6,35 @@ class Favoritos extends Component {
     constructor(props){
         super(props);
         this.state = {
-            peliViene: [],
+            peliFav: [],
             id: this.props.match.params.id,
         }
         console.log(this.props.match.params.id)
+        console.log(this.state.peliFav)
     };
 
     componentDidMount(){
         console.log('Mount')
-        fetch(`https://api.themoviedb.org/3/movie/${this.state.id}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=399cd9827f714613d04693cee425808c&language=en-US`)
         .then((res) => res.json())
-            .then((data) =>
-                this.setState({
-                    peliViene: data,
-                })
-            )
-            .catch(error => console.log(error))
+        .then((data) =>
+        this.setState({
+            peliFav: data,
+        })
+        )
+        .catch(error => console.log(error))
     }
 
     render(){
         return(
             console.log('Traigo las pelis'),
-            console.log(this.state.peliViene),
+            console.log(this.state.peliFav),
             <React.Fragment>
                 <h3 className="titulo1"> FAVORITOS:</h3>
                 <section className="container">
                 <article className="articulo"> 
-                    <h2> ${peliViene.title}</h2>
-                        <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${peliViene.poster_path}`} alt={`${peliViene.title}`} />
+                    <h2> ${this.state.peliFav.title}</h2>
+                        <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${this.state.peliFav.poster_path}`} alt={`${this.state.peliFav.title}`} />
                 </article>
                 </section> 
             </React.Fragment>
