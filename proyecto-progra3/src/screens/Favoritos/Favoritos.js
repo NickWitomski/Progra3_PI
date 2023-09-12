@@ -7,25 +7,20 @@ class Favoritos extends Component {
         super(props);
         this.state = {
             favs: [],
-            id: this.props.match.params.id,
         }
-        console.log(this.props.match.params.id)
-        console.log(this.state.favs)
     };
 
     componentDidMount(){
         let favs = [];
         let recuperoStorage = localStorage.getItem('favs')
-
         if (recuperoStorage !== null) {
-
             let storageToArray = JSON.parse(recuperoStorage)
             favs = storageToArray
         }
         let peliculasFavs = [];
 
-        favs.map(unIdDelArray => (
-            fetch(`https://api.themoviedb.org/3/movie/${unIdDelArray}?api_key=d1566b6a7005fc1288c0cf8495a15e2e&language=en-US`)
+        favs.map(unId => (
+            fetch(`https://api.themoviedb.org/3/movie/${unId}?api_key=d1566b6a7005fc1288c0cf8495a15e2e&language=en-US`)
             .then(response => response.json())
             .then(data => {
                 peliculasFavs.push(data);
@@ -36,18 +31,7 @@ class Favoritos extends Component {
             .catch(error => console.log(error)) 
             ))
         }
-        
-    borrarPelicula(idPeliABorrar){
-        let arrayFiltrado = this.state.favs.filter(unaPeli => unaPeli.id !== idPeliABorrar)
-        
-        this.setState({
-            favs: arrayFiltrado
-        })
-    }
-                
-            
     
-
     render(){
         return(
             console.log('Traigo las pelis'),
