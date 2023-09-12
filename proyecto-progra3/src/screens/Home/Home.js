@@ -71,23 +71,6 @@ class Home extends Component {
 
       </React.Fragment>
       )
-      
-  
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       // <React.Fragment>
       //   <FormDeBusqueda/>
       //   <h3> PELICULAS MÁS POPULARES </h3>
