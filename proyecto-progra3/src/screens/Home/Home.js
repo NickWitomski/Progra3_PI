@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
-import FormDeBusqueda from "../../components/FormDeBusqueda/FormDeBusqueda";
+// import FormDeBusqueda from "../../components/FormDeBusqueda/FormDeBusqueda";
 
 
 
@@ -57,7 +57,7 @@ class Home extends Component {
           )}
         </section> */}
 
-          <FormDeBusqueda/>
+          {/* <FormDeBusqueda/> */}
           <h3> PELICULAS MÁS POPULARES </h3>
           <Link to="/verTodas"> Ver todas </Link>
           <section className="categoria1">
@@ -70,7 +70,7 @@ class Home extends Component {
           <PeliculasContainer movies={this.state.peliculasCartelera}/>
           </section>
 
-          <FormDeBusqueda textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />,
+          {/* <FormDeBusqueda textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />, */}
 
 
           {
