@@ -13,10 +13,11 @@ class PeliculasContainer extends Component{
              <React.Fragment>
              {this.props.movies.map((data, idx) =>
                 <Pelicula key={data + idx} peliculas={data} />)}
-                :
-                <h1>
-                  <p>Cargando...</p>
-                </h1>
+                : (
+                  <div>
+                  <h1>Cargando</h1>
+                  </div>
+                )
              </React.Fragment>
              )
 

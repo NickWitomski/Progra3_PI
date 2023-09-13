@@ -4,6 +4,8 @@ import Home from "../../screens/Home/Home";
 import PeliculasContainer from "../PeliculasContainer/PeliculasContainer";
 import VerTodasPopulares from "../../screens/VerTodas/VerTodasPopulares";
 import VerTodasCartelera from "../../screens/VerTodas/VerTodasCartelera";
+import Favoritos from "../../screens/Favoritos/Favoritos";
+
 import "./Pelicula.css"
 
 class Pelicula extends Component {
@@ -18,6 +20,7 @@ class Pelicula extends Component {
       id: this.props.peliculas.id,
     }
     console.log(this.props.peliculas.id)
+    
   }
   
   metodoVerDescripcion(){
@@ -80,9 +83,10 @@ class Pelicula extends Component {
   render() {
     console.log(this.state.peliculasArray);
     let pelicula = this.state.peliculasArray;
+    
     return (
-     
-        <article className="articulo">
+        <React.Fragment>
+          <article className="articulo">
           <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`} alt={pelicula.title} />
           <p className="titulocategorias">{pelicula.title}</p>
           <button className="botonPelicula" onClick= {() => this.metodoVerDescripcion()}> 
@@ -92,6 +96,8 @@ class Pelicula extends Component {
           <button className="botonPelicula" > <Link to={`/detallePelicula/${pelicula.id}`}> Ir a detalle </Link> </button>
           <button onClick= {() => this.agregarySacarDeFavoritos(pelicula.id)} className="botonPelicula" >{this.state.textoBotonFavs}</button>
         </article>
+        </React.Fragment>
+        
       )
 
     
