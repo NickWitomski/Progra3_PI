@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "./Filtrado.css";
-import VerTodas from "../../screens/VerTodas/VerTodas";
+import VerTodas from "../../screens/VerTodas/VerTodasPopulares";
 import PeliculasContainer from "../PeliculasContainer/PeliculasContainer";
 
 class Filtrado extends Component {

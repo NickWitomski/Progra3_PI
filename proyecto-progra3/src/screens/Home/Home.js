@@ -59,13 +59,13 @@ class Home extends Component {
 
           {/* <FormDeBusqueda/> */}
           <h3> PELICULAS MÁS POPULARES </h3>
-          <Link to="/verTodas"> Ver todas </Link>
+          <Link to="/verTodas/Populares"> Ver todas </Link>
           <section className="categoria1">
             <PeliculasContainer movies={this.state.peliculasPopulares}/>
           </section>
 
           <h3> PELICULAS EN CARTELERA </h3>
-          <Link to="/verTodas"> Ver todas </Link>
+          <Link to="/verTodas/Cartelera"> Ver todas </Link>
           <section className="categoria2">
           <PeliculasContainer movies={this.state.peliculasCartelera}/>
           </section>

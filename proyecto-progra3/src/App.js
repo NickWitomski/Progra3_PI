@@ -5,8 +5,9 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
 import Favoritos from './screens/Favoritos/Favoritos.js';
 import NoEncontrada from './screens/NoEncontrado/noEncontrado.js';
-import VerTodas from "./screens/VerTodas/VerTodas.js";
+import VerTodasPopulares from "./screens/VerTodas/VerTodasPopulares.js";
 import DetallePelicula2 from './screens/DetallePelicula/DetallePelicula2.js';
+import VerTodasCartelera from './screens/VerTodas/VerTodasCartelera.js';
 
 
 
@@ -17,7 +18,8 @@ function App() {
       <Header/>
       <Switch>
       <Route path="/" exact={true} component={Home} />
-      <Route path="/verTodas" component={VerTodas} />
+      <Route path="/verTodas/Populares" component={VerTodasPopulares} />
+      <Route path="/verTodas/Cartelera" component={VerTodasCartelera} />
       <Route path="/favoritos"  component={Favoritos}/> 
       <Route path="/detallePelicula/:id" exact = {true} component={DetallePelicula2}/>
       <Route component={NoEncontrada}/>

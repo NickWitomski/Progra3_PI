@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import Home from "../../screens/Home/Home";
 import PeliculasContainer from "../PeliculasContainer/PeliculasContainer";
-import VerTodas from "../../screens/VerTodas/VerTodas";
+import VerTodasPopulares from "../../screens/VerTodas/VerTodasPopulares";
+import VerTodasCartelera from "../../screens/VerTodas/VerTodasCartelera";
 import "./Pelicula.css"
 
 class Pelicula extends Component {
