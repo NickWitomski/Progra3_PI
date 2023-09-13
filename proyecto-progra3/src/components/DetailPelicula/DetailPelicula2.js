@@ -6,23 +6,61 @@ class DetailPelicula2 extends Component{
     constructor(props){
         super(props)
         this.state = {
-            textoFavoritos: "Agregar a favoritos",
+            textoBotonFavs: "Agregar a favoritos",
             generosTraidos: this.props.generos,
             titulo: this.props.titulo,
             foto: this.props.portada,
             rating: this.props.rating,
             sinopsis: this.props.sinopsis,
             duracion: this.props.duracion,
-            fecha_de_estreno: this.props.fecha
+            fecha_de_estreno: this.props.fecha,
+            favs: [],
+            id: this.props.id
+        }
+        console.log(this.props.id)
+    }
+
+    componentDidMount(){
+        let chequearStorage = localStorage.getItem('favs')
+
+        if(chequearStorage !== null){
+            let favs = JSON.parse(chequearStorage)
+      
+            if(favs.includes(this.state.id)){
+               this.setState({
+                   textoBotonFavs: "Eliminar de favoritos"})
+                }
         }
     }
 
-    // componentDidMount(){
-    //     let peliculaTraida = localStorage.getItem("pelicula")
-    //     if(peliculaTraida === null){
-    //         this.state.textoFavoritos = "Agregar a favoritos"
-    //     } 
-    // }
+    agregarySacarDeFavoritos(idBuscado){
+        let favs = []
+        let chequearStorage = localStorage.getItem('favs');
+    
+        if(chequearStorage !== null){
+          //Agregar el id
+          favs = JSON.parse(chequearStorage)
+        }
+    
+        if(favs.includes(this.state.id)){
+          //sacar el id
+          favs = favs.filter(i => i !== idBuscado)
+          //Cambiar el texto del boton
+          this.setState({
+            textoBotonFavs: "Agregar a favoritos"})
+        }else{
+          favs.push(idBuscado);
+          this.setState({
+            textoBotonFavs: "Eliminar de favoritos"})
+        }
+    
+        //Guardar los cambios en el localStorage (convertir en strings)
+    
+        let favsToStrings = JSON.stringify(favs);
+        localStorage.setItem('favs', favsToStrings);
+    
+        console.log(localStorage)
+      }
    
 render(){
     return(
@@ -44,9 +82,9 @@ render(){
                 <p className="texto">Géneros: {this.state.generosTraidos}
                 </p>
             </article>
-             {/* <article className="articulo_boton">
-                <button className="favoritos"> ${this.state.textoFavoritos} </button>
-            </article>  */}
+             <article className="articulo_boton">
+             <button onClick= {() => this.agregarySacarDeFavoritos(this.state.id)} className="botonPelicula" >{this.state.textoBotonFavs}</button>
+            </article> 
         </section>
             
         </React.Fragment>

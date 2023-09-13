@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import Home from "../Home/Home";
+import "./Favoritos.css";
 
 class Favoritos extends Component {
     constructor(props){
