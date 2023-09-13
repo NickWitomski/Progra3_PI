@@ -6,7 +6,8 @@ class DetallePelicula2 extends Component {
         super(props);
         this.state = {
             peliculaLlego: [],
-            idPelicula: this.props.match.params.id
+            idPelicula: this.props.match.params.id,
+            textoBotonFavs: "Agregar a favoritos"
         }
     };
 
@@ -20,7 +21,49 @@ class DetallePelicula2 extends Component {
                 })
             )
             .catch(error => console.log(error))
+
+        //Boton favssss
+
+        let chequearStorage = localStorage.getItem('favs')
+
+        if(chequearStorage !== null){
+            let favs = JSON.parse(chequearStorage)
+      
+            if(favs.includes(this.state.id)){
+               this.setState({
+                   textoBotonFavs: "Eliminar de favoritos"})
+                }
+        }
     }
+
+    agregarySacarDeFavoritos(idBuscado){
+        let favs = []
+        let chequearStorage = localStorage.getItem('favs');
+    
+        if(chequearStorage !== null){
+          //Agregar el id
+          favs = JSON.parse(chequearStorage)
+        }
+    
+        if(favs.includes(this.state.id)){
+          //sacar el id
+          favs = favs.filter(i => i !== idBuscado)
+          //Cambiar el texto del boton
+          this.setState({
+            textoBotonFavs: "Agregar a favoritos"})
+        }else{
+          favs.push(idBuscado);
+          this.setState({
+            textoBotonFavs: "Eliminar de favoritos"})
+        }
+    
+        //Guardar los cambios en el localStorage (convertir en strings)
+    
+        let favsToStrings = JSON.stringify(favs);
+        localStorage.setItem('favs', favsToStrings);
+    
+        console.log(localStorage)
+      }
 
     render() {
         return (
