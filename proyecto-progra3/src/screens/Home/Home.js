@@ -4,7 +4,6 @@ import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
 import FormDeBusqueda from "../../components/FormDeBusqueda/FormDeBusqueda";
-import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
 
 
 
