@@ -1,13 +1,14 @@
 import React, {Component} from "react";
-import "./SearchResults.css";
-import Home from "../../screens/Home/Home";
+import "./Filtrado.css";
+import VerTodas from "../../screens/VerTodas/VerTodas";
+import PeliculasContainer from "../PeliculasContainer/PeliculasContainer";
 
-class FormDeBusqueda extends Component {
+class Filtrado extends Component {
     constructor(props) {
         super(props);
         this.state = { 
             textoDelInput: "",
-            allMovies: []
+            peliculas: this.props.peliculas
     }
         
     };
@@ -20,7 +21,7 @@ class FormDeBusqueda extends Component {
         return(
             console.log(this.state.textoDelInput),
             console.log("aca estan todas las pelis"),
-            console.log(this.state.allMovies),
+            console.log(this.state.peliculas),
             <React.Fragment>
                 <section className="caja2"> 
                     <form className= "formulario" onSubmit={(event)=> this.evitarSubmit(event)} >
@@ -34,4 +35,4 @@ class FormDeBusqueda extends Component {
     };
 }
 
-export default FormDeBusqueda;
+export default Filtrado;
