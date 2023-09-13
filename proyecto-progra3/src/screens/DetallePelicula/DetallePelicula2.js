@@ -29,7 +29,7 @@ class DetallePelicula2 extends Component {
             console.log("generos"),
             console.log(this.state.peliculaLlego.genres),
             <article>
-            <DetailPelicula2 portada={this.state.peliculaLlego.poster_path} titulo={this.state.peliculaLlego.original_title} fecha={this.state.peliculaLlego.release_date} rating={this.state.peliculaLlego.vote_average} sinopsis={this.state.peliculaLlego.overview} duracion={this.state.runtime} generos={[this.state.genres]}/>
+            <DetailPelicula2 portada={this.state.peliculaLlego.poster_path} titulo={this.state.peliculaLlego.original_title} fecha={this.state.peliculaLlego.release_date} rating={this.state.peliculaLlego.vote_average} sinopsis={this.state.peliculaLlego.overview} duracion={this.state.runtime} generos={this.state.genres}/>
             </article>
             // <div>
             //     {this.state.pelicula ?

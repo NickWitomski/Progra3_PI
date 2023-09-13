@@ -8,7 +8,6 @@ class DetailPelicula2 extends Component{
         this.state = {
             textoFavoritos: "Agregar a favoritos",
             generosTraidos: this.props.generos,
-            listaGeneros: [],
             titulo: this.props.titulo,
             foto: this.props.portada,
             rating: this.props.rating,
@@ -22,12 +21,13 @@ class DetailPelicula2 extends Component{
     //     let peliculaTraida = localStorage.getItem("pelicula")
     //     if(peliculaTraida === null){
     //         this.state.textoFavoritos = "Agregar a favoritos"
-    //     } else if ()
+    //     } 
     // }
    
 render(){
     return(
-        console.log(this.state.duracion),
+        console.log("hola"),
+        console.log(this.state.generosTraidos),
         <React.Fragment>
         <section className="section_peli1"> 
             <h1>{this.state.titulo}</h1>
@@ -40,15 +40,13 @@ render(){
                 <p className="texto"> Fecha de estreno: {this.state.fecha_de_estreno}</p>
                 <p className="texto"> Rating: {this.state.rating}</p>
                 <p className="texto"> Sinopsis: {this.state.sinopsis}</p>
-                <p className="texto"> Duración: {`${this.state.duracion} mins`}</p> 
-                {this.state.generosTraidos.map((genero,idx)=>
-                    this.state.listaGeneros.push(genero)
-                )}
-                <p>Géneros:{this.state.listaGeneros}</p>
-            {/* </article>
-             <article className="articulo_boton">
-                {/* <button className="favoritos"> ${this.state.peliculaTraida.textoInicial} </button> */}
-            </article> 
+                <p className="texto"> Duración: {this.state.duracion}</p> 
+                <p className="texto">Géneros: {this.state.generosTraidos}
+                </p>
+            </article>
+             {/* <article className="articulo_boton">
+                <button className="favoritos"> ${this.state.textoFavoritos} </button>
+            </article>  */}
         </section>
             
         </React.Fragment>
