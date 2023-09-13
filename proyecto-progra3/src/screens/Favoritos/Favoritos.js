@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Pelicula from "../../components/Pelicula/Pelicula";
-import Home from "../Home/Home";
 import "./Favoritos.css";
 
 class Favoritos extends Component {
@@ -13,7 +12,7 @@ class Favoritos extends Component {
 
     componentDidMount(){
         let favoritos = [];
-        let recuperoStorage = localStorage.getItem('favoritos')
+        let recuperoStorage = localStorage.getItem('favs')
         if (recuperoStorage !== null) {
             let storageToArray = JSON.parse(recuperoStorage)
             favoritos = storageToArray
@@ -42,10 +41,14 @@ class Favoritos extends Component {
                 <h3 className="titulo1"> FAVORITOS</h3>
                 <section className="container">
                 <article className="articulo"> 
-                    <h2> {this.state.favs.title}</h2>
-                    <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${this.state.favs.poster_path}`}  alt={this.state.favs.title} />
+                {this.state.favs.map((pelicula, idx) =>
+                <Pelicula  key = {pelicula + idx} peliculas={pelicula}  />
+                
+                )}
+                       
                 </article>
-                </section> 
+                </section>  
+
             </React.Fragment>
         )
 
