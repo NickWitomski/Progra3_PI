@@ -28,9 +28,6 @@ class VerTodasPopulares extends Component {
         this.setState({ textoDelInput: event.target.value }, () => console.log(this.state.textoDelInput))
     }
 
-    cargarMas(eventoMasInfo){
-        
-    }
 
 
     render() {

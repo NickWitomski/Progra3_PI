@@ -5,7 +5,7 @@ import PeliculasContainer from "../PeliculasContainer/PeliculasContainer";
 import VerTodasPopulares from "../../screens/VerTodas/VerTodasPopulares";
 import VerTodasCartelera from "../../screens/VerTodas/VerTodasCartelera";
 import Favoritos from "../../screens/Favoritos/Favoritos";
-
+import SearchResults from "../../screens/SearchResults/SearchResults";
 import "./Pelicula.css"
 
 class Pelicula extends Component {

@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import './Header.css';
+import FormDeBusqueda from "../FormDeBusqueda/FormDeBusqueda"
 
 function Header(){
     return(
@@ -17,13 +18,9 @@ function Header(){
                         </ul>
                     </nav>
                 </section>
-                {/* <section className="caja2"> 
-                    <form className= "formulario" action="/searchResults" method="GET">
-                        <input className="input" type ="text" defaultValue="" name="name" placeholder="Ingresa una película o serie"/>
-                        <button type="submit"> <i className="fa-solid fa-magnifying-glass"></i></button> 
-                    </form>
-                    <p className="error"> </p> 
-                </section> */}
+                <section className="caja2"> 
+                   <FormDeBusqueda/>
+                </section>
             </header>
         </React.Fragment>
     
