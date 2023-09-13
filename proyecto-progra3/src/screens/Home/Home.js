@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
 // import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
-// import FormDeBusqueda from "../../components/FormDeBusqueda/FormDeBusqueda";
+
 
 
 
@@ -13,7 +13,6 @@ class Home extends Component {
     this.state = {
       peliculasPopulares: [],
       peliculasCartelera: [],
-      textoDelInput: "",
       allMovies: []
     }
   };
@@ -36,19 +35,6 @@ class Home extends Component {
         })
       )
       .catch(error => console.log(error));
-
-    fetch("https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1")
-      .then((res) => res.json())
-      .then((data) =>
-        this.setState({
-          allMovies: data.results,
-        })
-      )
-      .catch(error => console.log(error));
-  }
-
-  guardarCambios(event) {
-    this.setState({ textoDelInput: event.target.value }, () => console.log(this.state.textoDelInput))
   }
 
 

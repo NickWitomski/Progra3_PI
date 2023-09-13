@@ -7,7 +7,7 @@ class DetailPelicula2 extends Component{
         super(props)
         this.state = {
             textoBotonFavs: "Agregar a favoritos",
-            generosTraidos: this.props.generos,
+            generos: this.props.generos,
             titulo: this.props.titulo,
             foto: this.props.portada,
             rating: this.props.rating,
@@ -65,7 +65,7 @@ class DetailPelicula2 extends Component{
 render(){
     return(
         console.log("hola"),
-        console.log(this.state.generosTraidos),
+        console.log(this.state.generos),
         <React.Fragment>
         <section className="section_peli1"> 
             <h1>{this.state.titulo}</h1>
@@ -79,8 +79,10 @@ render(){
                 <p className="texto"> Rating: {this.state.rating}</p>
                 <p className="texto"> Sinopsis: {this.state.sinopsis}</p>
                 <p className="texto"> Duración: {this.state.duracion}</p> 
-                <p className="texto">Géneros: {this.state.generosTraidos}
-                </p>
+                {/* <p className="texto">Géneros: {this.state.generos.map(genero=>
+                    <li> {genero.name}</li>
+                )}
+                </p>  */}
             </article>
              <article className="articulo_boton">
              <button onClick= {() => this.agregarySacarDeFavoritos(this.state.id)} className="botonPelicula" >{this.state.textoBotonFavs}</button>
