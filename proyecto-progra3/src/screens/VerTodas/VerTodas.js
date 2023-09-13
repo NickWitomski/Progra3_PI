@@ -34,13 +34,15 @@ class VerTodas extends Component {
                 <Filtrado textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />
                 <h3> Filtrado </h3>
                 <section className="categoria2">
-                   
-                    {this.state.allMovies.map((data, idx) => {
+
+                            <Pelicula key={data + idx} peliculas={data} />
+    
+                    {/* {this.state.allMovies.map((data, idx) => {
                         if (this.state.textoDelInput.toLowerCase() === data.title) {
                             <Pelicula key={data + idx} peliculas={data} />
                         }
                     }
-                    )}
+                    )} */}
                 </section>
             </React.Fragment>
         )
