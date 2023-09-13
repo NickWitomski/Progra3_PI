@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
-// import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
-// import FormDeBusqueda from "../../components/FormDeBusqueda/FormDeBusqueda";
+import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
+import FormDeBusqueda from "../../components/FormDeBusqueda/FormDeBusqueda";
 
 
 
@@ -60,63 +60,61 @@ class Home extends Component {
     return (
 
       <React.Fragment>
-        <h3> PELICULAS EN CARTELERA </h3>
+
+       {/*  <h3> PELICULAS EN CARTELERA </h3>
         <Link to="/verTodas"> Ver todas </Link>
         <section className="categoria2">
           {this.state.peliculasCartelera.map((data, idx) =>
           <Pelicula key={data + idx} peliculas = {data} />
           )}
-        </section>
+        </section> */}
 
-      </React.Fragment>
-      )
-    //    <React.Fragment>
-    //      <FormDeBusqueda/>
-    //      <h3> PELICULAS MÁS POPULARES </h3>
-    //      <Link to="/verTodas"> Ver todas </Link>
-    //      <section className="categoria1">
-    //        <PeliculasContainer movies={this.state.peliculasPopulares}/>
-    //      </section>
+          <FormDeBusqueda/>
+          <h3> PELICULAS MÁS POPULARES </h3>
+          <Link to="/verTodas"> Ver todas </Link>
+          <section className="categoria1">
+            <PeliculasContainer movies={this.state.peliculasPopulares}/>
+          </section>
 
-    //      <h3> PELICULAS EN CARTELERA </h3>
-    //      <Link to="/verTodas"> Ver todas </Link>
-    //      <section className="categoria2">
-    //      <PeliculasContainer movies={this.state.peliculasCartelera}/>
-    //      </section>
+          <h3> PELICULAS EN CARTELERA </h3>
+          <Link to="/verTodas"> Ver todas </Link>
+          <section className="categoria2">
+          <PeliculasContainer movies={this.state.peliculasCartelera}/>
+          </section>
 
-    //      <FormDeBusqueda textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />,
+          <FormDeBusqueda textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />,
 
 
-    //      {
-    //        this.state.textoDelInput === "" ?
-    //          <div>
-    //             <h3> PELICULAS MÁS POPULARES </h3>
-    //      <Link to="/verTodas"> Ver todas </Link>
-    //      <section className="categoria1">
-    //        <PeliculasContainer moviesPopulares={() => this.state.peliculasPopulares}/>
-    //      </section>
+          {
+            this.state.textoDelInput === "" ?
+              <div>
+                 <h3> PELICULAS MÁS POPULARES </h3>
+          <Link to="/verTodas"> Ver todas </Link>
+          <section className="categoria1">
+            <PeliculasContainer movies={this.state.peliculasPopulares}/>
+          </section>
 
-    //            <h3> PELICULAS EN CARTELERA </h3>
-    //            <Link to="/verTodas"> Ver todas </Link>
-    //            <section className="categoria2">
-    //              <PeliculasContainer moviesCartelera={() =>this.state.peliculasCartelera}/>
-    //            </section>
-    //         </div>
-    //         :
-    //          <div>
-    //           {/* <h3> RESULTADOS DE BÚSQUEDA </h3>
-    //           <section className="categoria2">
-    //             {this.state.allMovies.map((data, idx) =>
-    //               {if (this.state.textoDelInput.toLowerCase() === data.title){
-    //                 <Pelicula key={data + idx} peliculas={data} />
-    //               }}
-    //             )}
-    //           </section> */}
-    //          </div>
+                <h3> PELICULAS EN CARTELERA </h3>
+                <Link to="/verTodas"> Ver todas </Link>
+                <section className="categoria2">
+                  <PeliculasContainer movies={this.state.peliculasCartelera}/>
+                </section>
+             </div>
+             :
+              <div>
+                <h3> RESULTADOS DE BÚSQUEDA </h3>
+               <section className="categoria2">
+                 {this.state.allMovies.map((data, idx) =>
+                   {if (this.state.textoDelInput.toLowerCase() === data.title){
+                     <Pelicula key={data + idx} peliculas={data} />
+                   }}
+                 )}
+               </section> 
+              </div>
 
-    //      }
-    //    </React.Fragment>
-    // )
+          }
+        </React.Fragment>
+     )
   }
   
 }
