@@ -39,24 +39,17 @@ class Favoritos extends Component {
             console.log(this.state.favs),
             <React.Fragment>
                 <h3 className="titulo1"> FAVORITOS</h3>
-                <section className="container">
-                <article className="articulo"> 
+                <section className="conteiner">
                 {this.state.favs.map((pelicula, idx) =>
                 <Pelicula  key = {pelicula + idx} peliculas={pelicula}  />
                 
                 )}
-                       
-                </article>
                 </section>  
 
             </React.Fragment>
         )
 
-    }
-        
-        
-
-    
+    } 
 }
 
 export default Favoritos;
