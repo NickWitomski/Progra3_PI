@@ -15,7 +15,7 @@ class PeliculasContainer extends Component{
                 <Pelicula key={data + idx} peliculas={data} />)}
                 : (
                   <div>
-                  <h1>Cargando</h1>
+                  <img src="./img/Loader.gif"></img>
                   </div>
                 )
              </React.Fragment>
