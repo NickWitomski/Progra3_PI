@@ -89,13 +89,13 @@ class Home extends Component {
             :
             <div>
               <h3> RESULTADOS DE BÚSQUEDA </h3>
-              <section className="categoria2">
+              {/* <section className="categoria2">
                 {this.state.allMovies.map((data, idx) =>
                   {if (textoDelInput.toLowerCase() === data.title){
                     <Pelicula key={data + idx} peliculas={data} />
                   }}
                 )}
-              </section>
+              </section> */}
             </div>
 
         }
