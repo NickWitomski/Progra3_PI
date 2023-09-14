@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Filtrado from "../../components/Filtrado/Filtrado";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import "./VerTodas.css"
+import VerTodasContainer from "../../components/VerTodasContainer/VerTodasContainer";
 
 class VerTodasPopulares extends Component {
     constructor(props) {
@@ -11,28 +12,17 @@ class VerTodasPopulares extends Component {
             allMovies: [],
             textoBoton: "Cargar más inforamción",
             masMovies: [],
-            page: 1
+            page: 2,
         }
     };
 
     componentDidMount() {
 
-        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
             .then((res) => res.json())
             .then((data) =>
                 this.setState({
                     allMovies: data.results,
-                    page: this.statepage + 1
-                })
-            )
-            .catch(error => console.log(error));
-
-            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&page=${this.state.page}}`)
-            .then((res) => res.json())
-            .then((data) =>
-                this.setState({
-                    masMovies: data.results,
-                    page: this.state.page + 1
                 })
             )
             .catch(error => console.log(error));
@@ -42,24 +32,25 @@ class VerTodasPopulares extends Component {
         this.setState({ textoDelInput: event.target.value }, () => console.log(this.state.textoDelInput))
     }
 
-   cargarMasInfo() {
-        if (this.state.textoBoton === "Cargar más inforamción") {
-          this.setState({
-            textoBoton: "Ver menos",
-            descripcionMostrada: true
-          })
-        } else {
-          this.setState({
-            textoBoton: "Cargar más inforamción",
-            descripcionMostrada: false
-          })
-        }
+    cargarMasInfo() {
+        let pageNumero = this.state.page;
 
-      }
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=${pageNumero}`)
+            .then((res) => res.json())
+            .then((data) =>
+                this.setState({
+                    masMovies: data.results.concat(this.state.masMovies),
+                    page: pageNumero + 1,
+                })
+            )
+            .catch(error => console.log(error));
+    }
 
     render() {
         return (
-
+            console.log("cambio el numero de pagina"),
+            console.log(this.state.page),
+            console.log(this.state.masMovies),
             <React.Fragment>
                 {this.state.allMovies ?
                     <div>
@@ -75,20 +66,16 @@ class VerTodasPopulares extends Component {
 
                             }
                         </section>
-                       
-                        <button onClick={() => this.cargarMasInfo()} className="botonPelicula"> {this.state.textoBoton} </button>
-                        <section className={`${this.state.descripcionMostrada ? "OcultarDescripcion2":  "MostrarDescripcion"} categoria2`}>
-                        {this.state.masMovies.map((data, idx) => {
-                                if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {
-                                    return <Pelicula key={data + idx} peliculas={data} />
-                                }
-                            }
-                            )
 
-                            }
-                        </section>
+                        <button onClick={() => this.cargarMasInfo()} className="botonPelicula"> {this.state.textoBoton} </button>
+                        <div>
+                            <section className="categoria2">
+                                <VerTodasContainer movies={this.state.masMovies} />
+                            </section>
+
+                        </div>
                     </div>
-                
+
                     :
                     <h3> Cargando ... </h3>
                 }

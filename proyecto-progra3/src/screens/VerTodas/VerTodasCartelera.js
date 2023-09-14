@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Filtrado from "../../components/Filtrado/Filtrado";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import "./VerTodas.css"
+import VerTodasContainer from "../../components/VerTodasContainer/VerTodasContainer";
 
 class VerTodasCartelera extends Component {
     constructor(props) {
@@ -10,26 +11,18 @@ class VerTodasCartelera extends Component {
             textoDelInput: "",
             allMovies: [],
             textoBoton: "Cargar más inforamción",
-            masMovies: []
+            masMovies: [],
+            page: 2,
         }
     };
 
     componentDidMount() {
 
-        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c`)
+        fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=1`)
             .then((res) => res.json())
             .then((data) =>
                 this.setState({
                     allMovies: data.results,
-                })
-            )
-            .catch(error => console.log(error));
-
-            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&page=2`)
-            .then((res) => res.json())
-            .then((data) =>
-                this.setState({
-                    masMovies: data.results,
                 })
             )
             .catch(error => console.log(error));
@@ -40,19 +33,18 @@ class VerTodasCartelera extends Component {
     }
 
     cargarMasInfo() {
-        if (this.state.textoBoton === "Cargar más inforamción") {
-          this.setState({
-            textoBoton: "Ver menos",
-            descripcionMostrada: true
-          })
-        } else {
-          this.setState({
-            textoBoton: "Cargar más inforamción",
-            descripcionMostrada: false
-          })
-        }
+        let pageNumero = this.state.page;
 
-      }
+        fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=${pageNumero}`)
+            .then((res) => res.json())
+            .then((data) =>
+                this.setState({
+                    masMovies: data.results.concat(this.state.masMovies),
+                    page: pageNumero + 1,
+                })
+            )
+            .catch(error => console.log(error));
+    }
 
 
     render() {
@@ -75,16 +67,12 @@ class VerTodasCartelera extends Component {
                         </section>
 
                         <button onClick={() => this.cargarMasInfo()} className="botonPelicula"> {this.state.textoBoton} </button>
-                        <section className={`${this.state.descripcionMostrada ? "OcultarDescripcion2":  "MostrarDescripcion"} categoria2`}>
-                        {this.state.masMovies.map((data, idx) => {
-                                if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {
-                                    return <Pelicula key={data + idx} peliculas={data} />
-                                }
-                            }
-                            )
+                        <div>
+                            <section className="categoria2">
+                                <VerTodasContainer movies={this.state.masMovies} />
+                            </section>
 
-                            }
-                        </section>
+                        </div>
 
                     </div> : <h3> Cargando ... </h3>
                 }

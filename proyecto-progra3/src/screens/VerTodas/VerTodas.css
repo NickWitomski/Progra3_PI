@@ -1,22 +1,7 @@
-
-.MostrarDescripcion{
-    display: none;
-    background-color: rgb(255, 225, 170);
-    border-radius: 7px;
-    padding: 3px;
-    text-align: justify;
+.botonPelicula {
+    width: 75px;
+    height: 35px;
 }
-
-.OcultarDescripcion2{
-    background-color: rgb(255, 225, 170);
-    border-radius: 7px;
-    padding: 3px;
-    text-align: justify;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
 
 h3 {
     color:rgb(255, 225, 170);
