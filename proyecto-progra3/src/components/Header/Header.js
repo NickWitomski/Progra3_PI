@@ -14,7 +14,7 @@ function Header() {
                         <ul>
                             <li> <Link to='/' className="link"> HOME </Link></li>
                             <li> <Link to='/Favoritos' className="link"> FAVORITOS </Link></li>
-                            <li> <Link to='/' className="link"> EL QUE FALTA </Link></li>
+                            <li> <Link to='/aboutUs' className="link"> ABOUT US </Link></li>
                         </ul>
                     </nav>
                 </section>

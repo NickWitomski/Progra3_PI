@@ -9,7 +9,7 @@ import VerTodasPopulares from "./screens/VerTodas/VerTodasPopulares.js";
 import DetallePelicula2 from './screens/DetallePelicula/DetallePelicula2.js';
 import VerTodasCartelera from './screens/VerTodas/VerTodasCartelera.js';
 import SearchResults from './screens/SearchResults/SearchResults.js';
-
+import AboutUs from './screens/AboutUs/AboutUs.js';
 
 
 
@@ -20,6 +20,7 @@ function App() {
       <Switch>
       <Route path="/" exact={true} component={Home} />
       <Route path="/searchResults/:query" component={SearchResults}/>
+      <Route path="/aboutUs" component={AboutUs}/>
       <Route path="/verTodas/Populares" component={VerTodasPopulares} />
       <Route path="/verTodas/Cartelera" component={VerTodasCartelera} />
       <Route path="/favoritos"  component={Favoritos}/> 
