@@ -8,7 +8,10 @@ class VerTodasPopulares extends Component {
         super(props);
         this.state = {
             textoDelInput: "",
-            allMovies: []
+            allMovies: [],
+            textoBoton: "Cargar más inforamción",
+            masMovies: [],
+            page: 1
         }
     };
 
@@ -19,6 +22,17 @@ class VerTodasPopulares extends Component {
             .then((data) =>
                 this.setState({
                     allMovies: data.results,
+                    page: this.statepage + 1
+                })
+            )
+            .catch(error => console.log(error));
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&page=${this.state.page}}`)
+            .then((res) => res.json())
+            .then((data) =>
+                this.setState({
+                    masMovies: data.results,
+                    page: this.state.page + 1
                 })
             )
             .catch(error => console.log(error));
@@ -28,12 +42,24 @@ class VerTodasPopulares extends Component {
         this.setState({ textoDelInput: event.target.value }, () => console.log(this.state.textoDelInput))
     }
 
+   cargarMasInfo() {
+        if (this.state.textoBoton === "Cargar más inforamción") {
+          this.setState({
+            textoBoton: "Ver menos",
+            descripcionMostrada: true
+          })
+        } else {
+          this.setState({
+            textoBoton: "Cargar más inforamción",
+            descripcionMostrada: false
+          })
+        }
 
+      }
 
     render() {
         return (
-            console.log("aca estan vertodas"),
-            console.log(this.state.allMovies),
+
             <React.Fragment>
                 {this.state.allMovies ?
                     <div>
@@ -49,8 +75,20 @@ class VerTodasPopulares extends Component {
 
                             }
                         </section>
-                        <button className="botonPelicula"> Cargar más informacion </button>
+                       
+                        <button onClick={() => this.cargarMasInfo()} className="botonPelicula"> {this.state.textoBoton} </button>
+                        <section className={`${this.state.descripcionMostrada ? "OcultarDescripcion2":  "MostrarDescripcion"} categoria2`}>
+                        {this.state.masMovies.map((data, idx) => {
+                                if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {
+                                    return <Pelicula key={data + idx} peliculas={data} />
+                                }
+                            }
+                            )
+
+                            }
+                        </section>
                     </div>
+                
                     :
                     <h3> Cargando ... </h3>
                 }

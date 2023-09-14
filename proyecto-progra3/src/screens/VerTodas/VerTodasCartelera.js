@@ -8,7 +8,9 @@ class VerTodasCartelera extends Component {
         super(props);
         this.state = {
             textoDelInput: "",
-            allMovies: []
+            allMovies: [],
+            textoBoton: "Cargar más inforamción",
+            masMovies: []
         }
     };
 
@@ -22,11 +24,36 @@ class VerTodasCartelera extends Component {
                 })
             )
             .catch(error => console.log(error));
+
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&page=2`)
+            .then((res) => res.json())
+            .then((data) =>
+                this.setState({
+                    masMovies: data.results,
+                })
+            )
+            .catch(error => console.log(error));
     }
 
     guardarCambios(event) {
         this.setState({ textoDelInput: event.target.value }, () => console.log(this.state.textoDelInput))
     }
+
+    cargarMasInfo() {
+        if (this.state.textoBoton === "Cargar más inforamción") {
+          this.setState({
+            textoBoton: "Ver menos",
+            descripcionMostrada: true
+          })
+        } else {
+          this.setState({
+            textoBoton: "Cargar más inforamción",
+            descripcionMostrada: false
+          })
+        }
+
+      }
+
 
     render() {
         return (
@@ -46,7 +73,19 @@ class VerTodasCartelera extends Component {
                             )}
 
                         </section>
-                        <button className="botonPelicula"> Cargar más informacion </button>
+
+                        <button onClick={() => this.cargarMasInfo()} className="botonPelicula"> {this.state.textoBoton} </button>
+                        <section className={`${this.state.descripcionMostrada ? "OcultarDescripcion2":  "MostrarDescripcion"} categoria2`}>
+                        {this.state.masMovies.map((data, idx) => {
+                                if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {
+                                    return <Pelicula key={data + idx} peliculas={data} />
+                                }
+                            }
+                            )
+
+                            }
+                        </section>
+
                     </div> : <h3> Cargando ... </h3>
                 }
             </React.Fragment>

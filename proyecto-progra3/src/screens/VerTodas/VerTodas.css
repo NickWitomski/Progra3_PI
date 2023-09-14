@@ -1,3 +1,23 @@
+
+.MostrarDescripcion{
+    display: none;
+    background-color: rgb(255, 225, 170);
+    border-radius: 7px;
+    padding: 3px;
+    text-align: justify;
+}
+
+.OcultarDescripcion2{
+    background-color: rgb(255, 225, 170);
+    border-radius: 7px;
+    padding: 3px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
 h3 {
     color:rgb(255, 225, 170);
     text-align: center;
@@ -8,10 +28,6 @@ h3 {
     margin-left: 20px;
 }
 
-.categoria2 {
-    display: flex;
-    flex-wrap: wrap;   
-}
 
 button {
     width: 40px;
@@ -43,3 +59,4 @@ button {
         width: 35px;
         height:25px;
     }
+

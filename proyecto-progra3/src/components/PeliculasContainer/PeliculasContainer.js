@@ -11,7 +11,7 @@ class PeliculasContainer extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.props.movies.map((data, idx) =>
+        {this.props.movies.slice(0,6).map((data, idx) =>
           <Pelicula key={data + idx} peliculas={data} />)}
       </React.Fragment>
     )
