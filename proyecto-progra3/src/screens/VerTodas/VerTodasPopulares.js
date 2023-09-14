@@ -10,7 +10,8 @@ class VerTodasPopulares extends Component {
             textoDelInput: "",
             allMovies: [],
             textoBoton: "Cargar más inforamción",
-            masMovies: []
+            masMovies: [],
+            page: 1
         }
     };
 
@@ -21,15 +22,17 @@ class VerTodasPopulares extends Component {
             .then((data) =>
                 this.setState({
                     allMovies: data.results,
+                    page: this.statepage + 1
                 })
             )
             .catch(error => console.log(error));
 
-            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&page=2`)
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=399cd9827f714613d04693cee425808c&page=${this.state.page}}`)
             .then((res) => res.json())
             .then((data) =>
                 this.setState({
                     masMovies: data.results,
+                    page: this.state.page + 1
                 })
             )
             .catch(error => console.log(error));
@@ -56,10 +59,7 @@ class VerTodasPopulares extends Component {
 
     render() {
         return (
-            console.log("aca estan vertodas"),
-            console.log(this.state.allMovies),
-            console.log("aca estan  mas pelis"),
-            console.log(this.state.masMovies),
+
             <React.Fragment>
                 {this.state.allMovies ?
                     <div>
