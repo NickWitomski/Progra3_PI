@@ -33,21 +33,22 @@ class VerTodasCartelera extends Component {
             console.log("aca estan vertodas"),
             console.log(this.state.allMovies),
             <React.Fragment>
-                <Filtrado textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />,
-            
-               
-                <h3> Peliculas en cartelera: </h3>
-                <section className="categoria2">
-                {this.state.allMovies.map((data,idx)=>
-                {
-                    if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())){
-                        return <Pelicula key={data + idx} peliculas={data} />
-                    } 
+                {this.state.allMovies ?
+                    <div>
+                        <Filtrado textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />,
+                        <h3> Peliculas en cartelera: </h3>
+                        <section className="categoria2">
+                            {this.state.allMovies.map((data, idx) => {
+                                if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {
+                                    return <Pelicula key={data + idx} peliculas={data} />
+                                }
+                            }
+                            )}
+
+                        </section>
+                        <button className="botonPelicula"> Cargar más informacion </button>
+                    </div> : <h3> Cargando ... </h3>
                 }
-                ) }
-                    
-                </section>
-                <button className="botonPelicula"> Cargar más informacion </button>
             </React.Fragment>
         )
     };

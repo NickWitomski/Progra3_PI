@@ -6,7 +6,7 @@ class SearchResults extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            resultados:[]
+            resultados: []
         }
     }
 
@@ -21,25 +21,23 @@ class SearchResults extends Component {
             .catch(error => console.log(error));
     }
 
-    render(){
-        return(
-            console.log(this.props.match.params.query),
-            console.log("resultado para"),
-            console.log(this.state.resultados),
+    render() {
+        return (
             <React.Fragment>
-            <h3> RESULTADOS DE BÚSQUEDA:</h3>
+                <h3> RESULTADOS DE BÚSQUEDA:</h3>
 
-            {this.state.resultados ? 
-            <Pelicula peliculas={this.state.resultados}/>
-            // {this.props.match.params.query === this.state.resultados.title
-            //     <article>
-            //         <Pelicula peliculas={this.state.resultados}/>
-            //     </article>
-            // }
-                
-            : 
-            <h3>Cargando ...  </h3>
-            }
+                {this.state.resultados ?
+                    <React.Fragment>
+                        {this.state.resultados.map((data, idx) => {
+                            if (data.title.toLowerCase().includes(this.props.match.params.query.toLowerCase())) {
+                                return <Pelicula key={data + idx} peliculas={data} />
+                            }
+                        }
+                        )}
+                    </React.Fragment>
+                    :
+                    <h3>Cargando ...  </h3>
+                }
             </React.Fragment>
         )
     }
