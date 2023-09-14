@@ -63,3 +63,22 @@ footer{
 article {
     margin: 20px 0px;
 }
+
+@media (max-width:1024px) {
+
+    body {
+        width: auto;
+        margin-right: 0px;
+    }
+
+}
+
+@media (max-width:650px) {
+    .texto1 {
+        font-size: 15px;
+    }
+
+    .contacto i {
+        font-size: 14px;
+    }
+}

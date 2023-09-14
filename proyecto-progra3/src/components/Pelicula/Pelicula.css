@@ -50,3 +50,33 @@ article {
 p{
     color: black;
 }
+
+@media (max-width:1024px) {
+
+    .articulo{
+        flex-wrap: wrap;
+        max-width: 250px;
+        display: flex;
+    }
+
+    .titulocategorias {
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    .imagen {
+        min-width: 200px;
+    }
+
+}
+
+@media (max-width:650px) {
+
+    .titulocategorias {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+}
