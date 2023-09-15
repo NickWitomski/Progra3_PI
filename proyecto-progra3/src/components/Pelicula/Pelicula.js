@@ -81,6 +81,7 @@ class Pelicula extends Component {
     console.log(localStorage)
   }
 
+  
   render() {
     console.log(this.state.peliculasArray);
     let pelicula = this.state.peliculasArray;
@@ -94,7 +95,7 @@ class Pelicula extends Component {
             {this.state.texto}
           </button>
           <p className={this.state.descripcionMostrada ? "MostrarDescripcion" : "OcultarDescripcion"}>{pelicula.overview}</p>
-          <button className="botonPelicula" > <Link to={`/detallePelicula/${pelicula.id}`}> Ir a detalle </Link> </button>
+          <button className="botonPelicula" > <Link to={`/detallePelicula/${pelicula.id}`} className="detalle"> Ir a detalle </Link> </button>
           <button onClick={() => this.agregarySacarDeFavoritos(pelicula.id)} className="botonPelicula" >{this.state.textoBotonFavs}</button>
         </article>
       </React.Fragment>

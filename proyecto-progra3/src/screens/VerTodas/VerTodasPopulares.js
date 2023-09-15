@@ -59,7 +59,7 @@ class VerTodasPopulares extends Component {
                         <section className="categoria2">
                             {this.state.allMovies.map((data, idx) => {
                                 if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {
-                                    return <Pelicula key={data + idx} peliculas={data} />
+                                    return <Pelicula key={data + idx} peliculas={data}/>
                                 }
                             }
                             )

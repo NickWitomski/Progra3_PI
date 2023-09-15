@@ -3,7 +3,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #000000, #434343);
+    background-color: rgb(20, 20, 20);
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin:0px;

@@ -3,11 +3,10 @@
     max-width: 250px;
     display: flex;
     justify-content: center;
-}
-
-article {
     margin: 20px 0px;
 }
+
+
 
 .titulocategorias {
     color:rgb(255, 225, 170);
@@ -25,11 +24,17 @@ article {
     margin: 0px 10px;
     display:block;
 }
-
+a.detalle{
+    text-decoration: none;
+    color: black;
+}
 
 .botonPelicula {
-    width: 75px;
+    width: 35%;
     height: 35px;
+    background-color: lightyellow;
+    border-radius: 8%;
+    border-color: rgb(24, 24, 23);
 }
 
 .MostrarDescripcion{

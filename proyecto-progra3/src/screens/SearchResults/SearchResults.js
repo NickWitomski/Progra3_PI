@@ -24,17 +24,22 @@ class SearchResults extends Component {
     render() {
         return (
             <React.Fragment>
-                <h3> RESULTADOS DE BÚSQUEDA:</h3>
+               
 
                 {this.state.resultados ?
-                    <React.Fragment>
-                        {this.state.resultados.map((data, idx) => {
+                <div>
+                    <h3> RESULTADOS DE BÚSQUEDA:</h3>
+                 <section className="conteiner">
+                     {this.state.resultados.map((data, idx) => {
                             if (data.title.toLowerCase().includes(this.props.match.params.query.toLowerCase())) {
                                 return <Pelicula key={data + idx} peliculas={data} />
                             }
                         }
                         )}
-                    </React.Fragment>
+                 </section>
+                </div>
+                 
+                       
                     :
                     <h3>Cargando ...  </h3>
                 }

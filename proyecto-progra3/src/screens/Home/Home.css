@@ -1,5 +1,11 @@
+* {
+    box-sizing:border-box;
+   
+}
 body {
-    background: linear-gradient(to right, #000000, #171717);
+    background-color: rgb(20, 20, 20);
+
+    /* background: linear-gradient(to right, #000000, #171717); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin:0px;
