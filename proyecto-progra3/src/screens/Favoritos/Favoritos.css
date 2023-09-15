@@ -12,3 +12,22 @@ h3{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+@media (max-width:650px) {
+
+    h3 {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width:1024px) {
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;   
+        justify-content: center;
+    }
+
+}

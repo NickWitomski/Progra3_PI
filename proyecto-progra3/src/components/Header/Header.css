@@ -82,3 +82,56 @@ button {
     width: 40px;
     height: 35px;
 }
+
+@media (max-width:1024px) {
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 130px;
+    }
+
+    .logo {
+        height: 8vh;
+    }
+
+    .caja2 {
+        margin-right: 30px;
+    }
+
+    .textonav {
+        font-size: 16px;
+        margin: 0px 10px;
+    }
+
+    input {
+        width: 250px;
+        height: 30px;
+    }
+
+    button {
+        height:30px;
+    }
+
+}
+
+@media (max-width:650px) {
+
+    .textonav {
+        font-size: 10.5px;
+        margin: 0px 5px;
+    }
+
+    input {
+        width: 172px;
+        height:25px;
+    }
+
+    button {
+        width: 35px;
+        height:25px;
+    }
+
+
+}
