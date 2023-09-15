@@ -3,6 +3,7 @@ import Filtrado from "../../components/Filtrado/Filtrado";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import "./VerTodas.css"
 
+
 class VerTodasCartelera extends Component {
     constructor(props) {
         super(props);
@@ -52,7 +53,7 @@ class VerTodasCartelera extends Component {
                 {this.state.allMovies ?
                     <div>
                         <Filtrado textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />,
-                        <h3> PELÍCULAS EN CARTELERA </h3>
+                        <h3 className='todas'> PELÍCULAS EN CARTELERA </h3>
                         <section className="categoria2">
                             {this.state.allMovies.map((data, idx) => {
                                 if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {

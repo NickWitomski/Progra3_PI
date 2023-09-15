@@ -8,7 +8,7 @@ function Header() {
         <React.Fragment>
             <header>
                 <section className="caja1">
-                    <img className="logo" src="./img/Logo prog.jpg" alt="logo" />
+                    <img className="logo" src="/img/Logo prog.jpg" alt="logo" />
 
                     <nav className="navegador">
                         <ul>

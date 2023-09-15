@@ -1,23 +1,20 @@
-.botonPelicula {
-    width: 75px;
+.botonCargar {
+    width: 20%;
     height: 35px;
+    margin: 30px;
+    background-color: rgb(227, 188, 164); 
+    border-radius: 5px;
 }
-
-h3 {
+h3.todas {
     color:rgb(255, 225, 170);
-    text-align: center;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
     justify-content: flex-start;
     display: flex;
-    margin-left: 20px;
+    margin: 30px;
 }
 
 
-button {
-    width: 40px;
-    height: 35px;
-}
 
 @media (max-width:1024px) {
 

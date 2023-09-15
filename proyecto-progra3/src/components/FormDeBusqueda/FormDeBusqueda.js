@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
+import './Form.css';
 
 class FormDeBusqueda extends Component {
     constructor(props) {

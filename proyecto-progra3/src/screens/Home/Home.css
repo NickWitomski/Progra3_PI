@@ -35,21 +35,20 @@ h3 {
 
 a.vertodas {
     text-decoration: none;
-    margin: 40px;
-    margin-top: 50px;
     color: rgb(143, 147, 86);
 }
 
 .botonVerTodas {
-    width: 10%;
-    height: 45px;
+    width: 7%;
+    height: 30px;
     background-color: lightyellow;
     border-radius: 8%;
     border-color: rgb(24, 24, 23);
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: 40px;
+   
 }
 
 @media (max-width:1024px) {
