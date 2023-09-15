@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import FormDeBusqueda from "../../components/FormDeBusqueda/FormDeBusqueda";
+import './Search.css';
 
 class SearchResults extends Component {
     constructor(props) {
