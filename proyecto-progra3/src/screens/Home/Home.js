@@ -4,6 +4,7 @@ import "./Home.css";
 import Pelicula from "../../components/Pelicula/Pelicula";
 import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
 
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +47,7 @@ class Home extends Component {
         {this.state.peliculasPopulares ?
           <div>
             <h3> PELICULAS MÁS POPULARES </h3>
-            <Link to="/verTodas/Populares"> Ver todas </Link>
+            <Link to="/verTodas/Populares" className ='vertodas'> Ver todas </Link>
             <section className="categoria1">
               <PeliculasContainer movies={this.state.peliculasPopulares} />
             </section>
@@ -56,7 +57,7 @@ class Home extends Component {
         {this.state.peliculasCartelera ?
           <div>
             <h3> PELICULAS EN CARTELERA </h3>
-            <Link to="/verTodas/Cartelera"> Ver todas </Link>
+            <Link to="/verTodas/Cartelera" className ='vertodas'> Ver todas </Link>
             <section className="categoria2">
               <PeliculasContainer movies={this.state.peliculasCartelera} />
             </section>

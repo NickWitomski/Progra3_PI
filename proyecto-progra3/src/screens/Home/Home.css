@@ -4,8 +4,6 @@
 }
 body {
     background-color: rgb(20, 20, 20);
-
-    /* background: linear-gradient(to right, #000000, #171717); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin:0px;
@@ -17,19 +15,27 @@ h3 {
     font-family: 'Oswald', sans-serif;
     justify-content: flex-start;
     display: flex;
-    margin-left: 20px;
+    margin: 40px;
 }
 
 .categoria1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
 
 .categoria2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+a.vertodas {
+    text-decoration: none;
+    margin: 40px;
+    margin-top: 50px;
+    color: rgb(143, 147, 86);
 }
 
 @media (max-width:1024px) {

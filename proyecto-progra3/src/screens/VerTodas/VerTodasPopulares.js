@@ -55,7 +55,7 @@ class VerTodasPopulares extends Component {
                 {this.state.allMovies ?
                     <div>
                         <Filtrado textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />
-                        <h3> Peliculas populares: </h3>
+                        <h3> PELÍCULAS POPULARES </h3>
                         <section className="categoria2">
                             {this.state.allMovies.map((data, idx) => {
                                 if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {

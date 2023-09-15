@@ -29,7 +29,7 @@ class SearchResults extends Component {
 
                 {this.state.resultados ?
                 <div>
-                    <h3> RESULTADOS DE BÚSQUEDA:</h3>
+                    <h3> RESULTADOS DE BÚSQUEDA</h3>
                  <section className="conteiner">
                      {this.state.resultados.map((data, idx) => {
                             if (data.title.toLowerCase().includes(this.props.match.params.query.toLowerCase())) {
