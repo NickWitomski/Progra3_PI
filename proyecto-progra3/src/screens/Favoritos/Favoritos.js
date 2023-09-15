@@ -41,8 +41,7 @@ class Favoritos extends Component {
                 <h3 className="titulo1"> FAVORITOS</h3>
                 <section className="conteiner">
                 {this.state.favs.map((pelicula, idx) =>
-                <Pelicula  key = {pelicula + idx} peliculas={pelicula}  />
-                
+                <Pelicula  key = {pelicula + idx} peliculas={pelicula}/>
                 )}
                 </section>  
 
