@@ -14,7 +14,8 @@ function Header() {
                         <ul>
                             <li> <Link to='/' className="link"> HOME </Link></li>
                             <li> <Link to='/Favoritos' className="link"> FAVORITOS </Link></li>
-                            <li> <Link to='/aboutUs' className="link"> ABOUT US </Link></li>
+                            <li><Link to="/verTodas/Populares" className ='link '> VER TODAS POPULARES </Link></li>
+                            <li> <Link to="/verTodas/Cartelera" className ='link'> VER TODAS CARTELERA </Link></li>
                         </ul>
                     </nav>
                 </section>

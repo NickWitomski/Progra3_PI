@@ -80,6 +80,7 @@ ul {
 .formulario {
     display: flex;
     align-self: center;
+    margin:20px
 }
 
 input {

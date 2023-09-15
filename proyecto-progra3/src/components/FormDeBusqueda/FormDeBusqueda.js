@@ -23,7 +23,7 @@ class FormDeBusqueda extends Component {
     render() {
         return (
             <React.Fragment>
-                <form className="formulario" onSubmit={(event) => this.evitarSubmit(event)} >
+                <form className="formularioHeader" onSubmit={(event) => this.evitarSubmit(event)} >
                     <input className="input" type="text" value={this.props.textoDelInput} name="name" placeholder="Ingresa una película o serie" onChange={(event) => this.guardarCambios(event)} />
                     <Link to={`/searchResults/${this.state.textoDelInput}`}> <button type="submit" ><i className="fa-solid fa-magnifying-glass"></i> </button> </Link>
                 </form>

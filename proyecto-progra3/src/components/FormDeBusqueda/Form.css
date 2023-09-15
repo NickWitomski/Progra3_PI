@@ -1,6 +1,7 @@
-.formulario {
-    display: flex;
-    margin: 20px;
+.formularioHeader {
+        display: flex;
+        align-items: center;
+        margin-top: 20px
 }
 
 input {
