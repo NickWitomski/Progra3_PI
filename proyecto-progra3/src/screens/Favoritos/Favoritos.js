@@ -30,7 +30,13 @@ class Favoritos extends Component {
                     })
                     .catch(error => console.log(error))
             ))
+
+            // if(this.state.favs.includes(this.props.match.params.id)){
+            //     peliculasFavs.filter({if(id)})
+            // }
         }
+
+        
     }
 
     render() {

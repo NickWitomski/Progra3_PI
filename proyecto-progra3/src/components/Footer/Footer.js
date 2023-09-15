@@ -8,7 +8,7 @@ function Footer() {
         <React.Fragment>
             <footer>
                 <section>
-                    <article>
+                    <article className="art1_footer">
 
                         {
                             listaEtiquetaP.map((elementoPe, idx) =>
@@ -24,7 +24,7 @@ function Footer() {
                         </ul>
                     </article>
                     <article className="art2_footer">
-                        <img className="logo_tmdb" src="./img/Logo_TMDB.svg" alt="Logo_themoviedatabase" />
+                        <img className="logo_tmdb" src="/img/Logo_TMDB.svg" alt="Logo_themoviedatabase" />
                     </article>
                 </section>
             </footer>

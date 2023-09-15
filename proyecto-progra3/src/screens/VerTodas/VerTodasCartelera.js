@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Filtrado from "../../components/Filtrado/Filtrado";
 import Pelicula from "../../components/Pelicula/Pelicula";
-import "./VerTodas.css"
+import "./VerTodas.css";
 import VerTodasContainer from "../../components/VerTodasContainer/VerTodasContainer";
 
 class VerTodasCartelera extends Component {
@@ -55,7 +55,7 @@ class VerTodasCartelera extends Component {
                 {this.state.allMovies ?
                     <div>
                         <Filtrado textoDelInput={this.state.textoDelInput} guardarCambios={(evento) => this.guardarCambios(evento)} />,
-                        <h3> PELÍCULAS EN CARTELERA </h3>
+                        <h3 className='todas'> PELÍCULAS EN CARTELERA </h3>
                         <section className="categoria2">
                             {this.state.allMovies.map((data, idx) => {
                                 if (data.title.toLowerCase().includes(this.state.textoDelInput.toLowerCase())) {
@@ -66,7 +66,7 @@ class VerTodasCartelera extends Component {
 
                         </section>
 
-                        <button onClick={() => this.cargarMasInfo()} className="botonPelicula"> {this.state.textoBoton} </button>
+                        <button onClick={() => this.cargarMasInfo()} className="botonCargar"> {this.state.textoBoton} </button>
                         <div>
                             <section className="categoria2">
                                 <VerTodasContainer movies={this.state.masMovies} />
