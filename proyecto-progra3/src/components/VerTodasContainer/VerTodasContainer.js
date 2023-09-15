@@ -4,6 +4,7 @@ import Pelicula from "../Pelicula/Pelicula";
 class VerTodasContainer extends Component {
     
   render() {
+    console.log(this.props.movies)
     return (
       <React.Fragment>
         {this.props.movies.map((data, idx) =>

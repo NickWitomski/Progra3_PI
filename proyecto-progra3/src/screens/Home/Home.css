@@ -1,15 +1,17 @@
 * {
-    box-sizing:border-box;
-   
+    box-sizing: border-box;
+
 }
+
 body {
     background-color: rgb(20, 20, 20);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin:0px;
+    margin: 0px;
 }
+
 h3 {
-    color:rgb(255, 225, 170);
+    color: rgb(255, 225, 170);
     text-align: center;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
@@ -22,7 +24,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
+
 }
 
 .categoria2 {
@@ -36,6 +38,18 @@ a.vertodas {
     margin: 40px;
     margin-top: 50px;
     color: rgb(143, 147, 86);
+}
+
+.botonVerTodas {
+    width: 10%;
+    height: 45px;
+    background-color: lightyellow;
+    border-radius: 8%;
+    border-color: rgb(24, 24, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 @media (max-width:1024px) {
@@ -71,7 +85,7 @@ a.vertodas {
     }
 
     button {
-        height:30px;
+        height: 30px;
     }
 
     .imagen {
@@ -80,24 +94,25 @@ a.vertodas {
 
     .categoria1 {
         display: flex;
-        flex-wrap: wrap;   
+        flex-wrap: wrap;
     }
 
     .categoria2 {
         display: flex;
-        flex-wrap: wrap;   
+        flex-wrap: wrap;
     }
 
     .categoria3 {
         display: flex;
-        flex-wrap: wrap;   
+        flex-wrap: wrap;
     }
 
-    .articulo{
+    .articulo {
         flex-wrap: wrap;
         max-width: 250px;
         display: flex;
     }
+
     .titulocategorias {
         display: flex;
         justify-content: center;
@@ -114,12 +129,12 @@ a.vertodas {
 
     input {
         width: 172px;
-        height:25px;
+        height: 25px;
     }
 
     button {
         width: 35px;
-        height:25px;
+        height: 25px;
     }
 
     .titulocategorias {
@@ -132,6 +147,7 @@ a.vertodas {
         display: flex;
         justify-content: center;
     }
+
     .texto1 {
         font-size: 15px;
     }

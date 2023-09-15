@@ -47,7 +47,7 @@ class Home extends Component {
         {this.state.peliculasPopulares ?
           <div>
             <h3> PELICULAS MÁS POPULARES </h3>
-            <Link to="/verTodas/Populares" className ='vertodas'> Ver todas </Link>
+            <button className="botonVerTodas"> <Link to="/verTodas/Populares" className ='vertodas'> Ver todas </Link></button>
             <section className="categoria1">
               <PeliculasContainer movies={this.state.peliculasPopulares} />
             </section>
@@ -57,7 +57,7 @@ class Home extends Component {
         {this.state.peliculasCartelera ?
           <div>
             <h3> PELICULAS EN CARTELERA </h3>
-            <Link to="/verTodas/Cartelera" className ='vertodas'> Ver todas </Link>
+            <button className="botonVerTodas"><Link to="/verTodas/Cartelera" className ='vertodas'> Ver todas </Link></button>
             <section className="categoria2">
               <PeliculasContainer movies={this.state.peliculasCartelera} />
             </section>
