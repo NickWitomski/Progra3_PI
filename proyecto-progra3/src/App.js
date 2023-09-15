@@ -19,11 +19,11 @@ function App() {
       <Header/>
       <Switch>
       <Route path="/" exact={true} component={Home} />
-      <Route path="/searchResults/:query" component={SearchResults}/>
-      <Route path="/aboutUs" component={AboutUs}/>
-      <Route path="/verTodas/Populares" component={VerTodasPopulares} />
-      <Route path="/verTodas/Cartelera" component={VerTodasCartelera} />
-      <Route path="/favoritos"  component={Favoritos}/> 
+      <Route path="/searchResults/:query" exact={true} component={SearchResults}/>
+      <Route path="/aboutUs" exact={true} component={AboutUs}/>
+      <Route path="/verTodas/Populares"exact={true} component={VerTodasPopulares} />
+      <Route path="/verTodas/Cartelera" exact={true} component={VerTodasCartelera} />
+      <Route path="/favoritos" exact={true} component={Favoritos}/> 
       <Route path="/detallePelicula/:id" exact = {true} component={DetallePelicula2}/>
       <Route component={NoEncontrada}/>
       </Switch>

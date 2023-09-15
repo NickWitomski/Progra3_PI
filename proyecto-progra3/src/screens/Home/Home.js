@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import Pelicula from "../../components/Pelicula/Pelicula";
 import PeliculasContainer from "../../components/PeliculasContainer/PeliculasContainer";
 
 

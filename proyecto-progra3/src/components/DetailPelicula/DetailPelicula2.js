@@ -61,7 +61,7 @@ class DetailPelicula2 extends Component {
         return (
             <React.Fragment>
                 <section className="section_peli1">
-                    <h1>{this.state.titulo}</h1>
+                    <h1>{this.state.pelicula.title}</h1>
                     <article className="articulo1">
                         <img className="imagen" src={`https://image.tmdb.org/t/p/w500/${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title} />
                     </article>
