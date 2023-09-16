@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Filtrado from "../../components/Filtrado/Filtrado";
 import Pelicula from "../../components/Pelicula/Pelicula";
-import "./VerTodas.css";
-import VerTodasContainer from "../../components/VerTodasContainer/VerTodasContainer";
+import "./VerTodas.css"
 
 class VerTodasPopulares extends Component {
     constructor(props) {
@@ -11,7 +10,6 @@ class VerTodasPopulares extends Component {
             textoDelInput: "",
             allMovies: [],
             textoBoton: "Cargar más inforamción",
-            masMovies: [],
             page: 2,
         }
     };
@@ -33,14 +31,13 @@ class VerTodasPopulares extends Component {
     }
 
     cargarMasInfo() {
-        let pageNumero = this.state.page;
 
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=${pageNumero}`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=399cd9827f714613d04693cee425808c&language=en-US&page=${this.state.page}`)
             .then((res) => res.json())
             .then((data) =>
                 this.setState({
-                    masMovies: data.results.concat(this.state.masMovies),
-                    page: pageNumero + 1,
+                    allMovies: this.state.allMovies.concat(data.results),
+                    page: this.state.page + 1
                 })
             )
             .catch(error => console.log(error));
@@ -66,18 +63,14 @@ class VerTodasPopulares extends Component {
 
                             }
                         </section>
+                        
 
                         <div className="divForm">
                            <button onClick={() => this.cargarMasInfo()} className="botonCargar"> {this.state.textoBoton} </button>
                         </div>
 
                         
-                        <div>
-                            <section className="categoria2">
-                                <VerTodasContainer movies={this.state.masMovies} />
-                            </section>
-
-                        </div>
+                      
                     </div>
 
                     :
