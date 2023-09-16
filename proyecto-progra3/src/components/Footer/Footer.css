@@ -53,6 +53,11 @@ footer{
     height: 80px;
 }
 
+.art1_footer{
+    text-align: center;
+    margin: 15px;
+}
+
 .art2_footer{
     display: flex;
     justify-content: center;

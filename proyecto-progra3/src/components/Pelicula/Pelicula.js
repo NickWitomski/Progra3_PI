@@ -66,12 +66,12 @@ class Pelicula extends Component {
       this.setState({
         textoBotonFavs: "Agregar a favoritos"
       })
-    } else {
+    } else{
       favs.push(idBuscado);
       this.setState({
         textoBotonFavs: "Eliminar de favoritos"
       })
-    }
+    } 
 
     //Guardar los cambios en el localStorage (convertir en strings)
 

@@ -67,7 +67,11 @@ class VerTodasPopulares extends Component {
                             }
                         </section>
 
-                        <button onClick={() => this.cargarMasInfo()} className="botonCargar"> {this.state.textoBoton} </button>
+                        <div className="divForm">
+                           <button onClick={() => this.cargarMasInfo()} className="botonCargar"> {this.state.textoBoton} </button>
+                        </div>
+
+                        
                         <div>
                             <section className="categoria2">
                                 <VerTodasContainer movies={this.state.masMovies} />
